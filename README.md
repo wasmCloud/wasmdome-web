@@ -2,7 +2,7 @@
 
 Main web application UI.
 
-**NOTE** this is an experiment right now, don't take any of this seriously. Code taken from a demo graciously created for me by the author of [Real-Time Phoenix](https://pragprog.com/book/sbsockets/real-time-phoenix).
+**NOTE** this is an experiment right now, don't take any of this seriously. Code taken from a demo graciously created for me by the author of [Real-Time Phoenix](https://pragprog.com/book/sbsockets/real-time-phoenix), the original can be found [here](https://github.com/sb8244/gnat-live-view-demo).
 
 # Original README
 
