@@ -16,7 +16,7 @@ defmodule NatsLiveview.GnatSubscriber do
 
     # This is going to go to every node in the cluster, so you may only want a single subscriber, or
     # have the subscription per-node and use local broadcast instead
-    :ok = NatsLiveviewWeb.Endpoint.broadcast("gnat:#{topic}", "gnat_msg", %{body: body, topic: topic})
+    :ok = NatsLiveviewWeb.Endpoint.broadcast("gnat:#{topic}", "gnat_msg", %{body: Jason.decode!(body), topic: topic})
 
     {:noreply, state}
   end
