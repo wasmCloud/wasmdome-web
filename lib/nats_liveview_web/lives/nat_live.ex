@@ -7,7 +7,7 @@ defmodule NatsLiveviewWeb.NatLive do
   # some unique ID (could be the received time?) and I didn't want to set that up.
   def render(assigns) do
     ~L"""
-    <%= for {pk, player} <- @players do %>
+    <%= for {_pk, player} <- @players do %>
       <%= player["name"]%> (<%= player["avatar"]%>) - <%= player["team"]%>      
       <br/>
     <% end %>
