@@ -1,4 +1,8 @@
 language: elixir
+services: docker
+before_install:
+- docker pull nats
+- docker run -p 4222:4222 -p 6222:6222 -p 8222:8222 nats
 elixir:
   - '1.10.1'
 otp_release:
