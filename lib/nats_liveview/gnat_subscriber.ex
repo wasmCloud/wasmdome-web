@@ -6,8 +6,10 @@ defmodule NatsLiveview.GnatSubscriber do
     GenServer.start_link(__MODULE__, opts)
   end
 
-  def init(topic: topic) do
-    Gnat.sub(Gnat, self(), "#{topic}")
+  def init(_topic) do
+    #Gnat.sub(Gnat, self(), "#{topic}")
+    Gnat.sub(Gnat, self(), "wasmdome.match_events.*")
+    Gnat.sub(Gnat, self(), "wasmdome.match_events.*.replay")
   end
 
   # Rebroadcast the message into Phoenix's PubSub

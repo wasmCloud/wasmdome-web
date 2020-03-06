@@ -16,7 +16,7 @@ defmodule NatsLiveviewWeb.Router do
   scope "/", NatsLiveviewWeb do
     pipe_through :browser
 
-    live "/matches/:match_id/:tidx", NatLive
+    live "/matches/:match_id", NatLive
   end
 
   # Other scopes may use custom stacks.

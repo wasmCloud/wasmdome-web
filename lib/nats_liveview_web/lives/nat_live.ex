@@ -12,8 +12,25 @@ defmodule NatsLiveviewWeb.NatLive do
       <br/>
     <% end %>
 
-    <%= for message <- @messages do %>
-      <pre><%= inspect message %></pre>
+    <br/>
+    <%= if @board != %{} do %>
+    <div class="game-board" 
+      style="display: grid; grid-template-columns: <%= for _x <- 0..@board.width-1 do %> 32px <% end %>; grid-template-rows: <%= for _y <- 0..@board.height-1 do %> 32px <% end %>">
+    <%= for piece <- @pieces do %>
+     <%= if piece != :empty do %>
+        <div style="grid-column: <%= piece.column%>; grid-row: <%= piece.row%>">
+          <%= piece.avatar %>
+        </div>      
+     <% end %>
+    <% end %>
+    </div>
+    <% end %>
+
+    <br/>
+    <pre><%= inspect @pieces %></pre>
+
+    <%= for evt <- @events do %>
+      <pre><%= inspect evt %></pre>
     <% end %>    
     """
   end
@@ -25,22 +42,38 @@ defmodule NatsLiveviewWeb.NatLive do
       # the channel so the handle_info functions can set up our state.
       
       # TODO: set this subscription up to take the match Id as a parameter from the page params
-      :ok = Phoenix.PubSub.subscribe(NatsLiveview.PubSub, "gnat:wasmdome.match_events.#{params["match_id"]}")
+      :ok = Phoenix.PubSub.subscribe(NatsLiveview.PubSub, "gnat:wasmdome.match_events.#{params["match_id"]}.replay")
     end
 
-    {:ok, assign(socket, messages: [], players: %{})}
+    {:ok, assign(socket, events: [], players: %{}, tindex: 1000, match_id: params["match_id"], board: %{}, pieces: [])}
   end
 
-  def handle_info(%{event: "gnat_msg", payload: %{body: %{"ActorStarted" => actor_started} = payload}}, socket =  %{assigns: %{messages: messages, players: players}}) do
+  def handle_info(%{event: "gnat_msg", payload: 
+        %{body: 
+            %{"MatchCreated" => 
+              %{"board_height" => h, "board_width" => w}
+            }
+        }},
+        socket = %{assigns: %{}}) do
+    Logger.debug("Match created")          
+    board = Core.Board.new(w, h)
+    {:noreply, assign(socket, board: board )}
+  end
+
+  def handle_info(%{event: "gnat_msg", payload: %{body: %{"ActorStarted" => actor_started} = payload}}, 
+        socket =  %{assigns: %{events: events, players: players}}) do
     Logger.debug("Adding actor")
     players = Map.put(players, actor_started["actor"], Map.delete(actor_started, "actor"))
-    {:noreply, assign(socket, messages: [payload | messages], players: players)}
+    {:noreply, assign(socket, events: [payload | events], players: players)}
 
   end
     
-  def handle_info(%{event: "gnat_msg", payload: payload}, socket = %{assigns: %{messages: messages, players: players}}) do
-    Logger.debug("Regular message")
-    {:noreply, assign(socket, messages: [payload | messages], players: players)}    
+  def handle_info(%{event: "gnat_msg", payload: payload}, 
+        socket = %{assigns: %{events: events, board: board, tindex: tindex}}) do
+    Logger.debug("Regular message: #{inspect payload.body}")
+    board = Core.Board.apply_event(board, payload.body, tindex)
+    pieces = Core.Board.render_pieces(board)
+    {:noreply, assign(socket, events: [payload | events], board: board, pieces: pieces)}    
   end
 
   #def handle_info(:tick, socket) do
