@@ -19,7 +19,7 @@ defmodule NatsLiveview.MixProject do
   def application do
     [
       mod: {NatsLiveview.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:ueberauth, :ueberauth_auth0, :logger, :runtime_tools]
     ]
   end
 
@@ -40,7 +40,10 @@ defmodule NatsLiveview.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:gnat, "~> 1.0.0"}
+      {:gnat, "~> 1.0.0"},
+      {:ueberauth, "~> 0.6"},
+      {:ueberauth_auth0, "~> 0.4"},
+      {:poison, "~> 4.0"}
     ]
   end
 end

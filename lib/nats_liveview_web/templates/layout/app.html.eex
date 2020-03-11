@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title><%= assigns[:page_title] || "NatsLiveview · Phoenix Framework" %></title>
+    <title><%= assigns[:page_title] || "Assembly Mechs: Beyond WasmDome" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <%= csrf_meta_tag() %>
   </head>
@@ -12,13 +12,16 @@
     <header>
       <section class="container">
         <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
+          <ul class="nav nav-pills pull-right">            
+            <%= if @current_user do %>
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/logout">Logout</a> (<%= @current_user.name %>)</li>
+            <% else %>
+              <li><a href="/">Home</a></li>
+              <li><a href="/auth/auth0">Login</a></li>
+            <% end %>
           </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
+        </nav>        
       </section>
     </header>
     <main role="main" class="container">

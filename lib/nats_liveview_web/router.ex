@@ -13,10 +13,20 @@ defmodule NatsLiveviewWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", NatsLiveviewWeb do
+  scope "/auth", NatsLiveviewWeb do
     pipe_through :browser
 
+    get "/:provider", AuthController, :request 
+    get "/:provider/callback", AuthController, :callback
+    post "/:provider/callback", AuthController, :callback
+  end
+
+  scope "/", NatsLiveviewWeb do
+    pipe_through :browser    
+
+    get "/", PageController, :index
     live "/matches/:match_id", NatLive
+    get "/logout", AuthController, :logout
   end
 
   # Other scopes may use custom stacks.
