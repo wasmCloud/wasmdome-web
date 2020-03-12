@@ -1,0 +1,15 @@
+// CoreUI and necessary plugins
+script(src='node_modules/@coreui/coreui-pro/dist/js/coreui.bundle.min.js')
+<!--[if IE]><!-->
+script(src='node_modules/@coreui/icons/js/svgxuse.min.js')
+<!--<![endif]-->
+
+block scripts
+
+if ajax
+  unless page
+    script.
+      new coreui.AsyncLoad(document.getElementById('ui-view'));
+      var tooltipEl = document.getElementById('header-tooltip');
+      var tootltip = new coreui.Tooltip(tooltipEl);
+
