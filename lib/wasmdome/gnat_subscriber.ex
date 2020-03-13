@@ -1,4 +1,4 @@
-defmodule NatsLiveview.GnatSubscriber do
+defmodule Wasmdome.GnatSubscriber do
   use GenServer
   require Logger
 
@@ -18,7 +18,7 @@ defmodule NatsLiveview.GnatSubscriber do
 
     # This is going to go to every node in the cluster, so you may only want a single subscriber, or
     # have the subscription per-node and use local broadcast instead
-    :ok = NatsLiveviewWeb.Endpoint.broadcast("gnat:#{topic}", "gnat_msg", %{body: Jason.decode!(body), topic: topic})
+    :ok = WasmdomeWeb.Endpoint.broadcast("gnat:#{topic}", "gnat_msg", %{body: Jason.decode!(body), topic: topic})
 
     {:noreply, state}
   end

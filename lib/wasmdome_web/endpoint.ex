@@ -1,5 +1,5 @@
-defmodule NatsLiveviewWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :nats_liveview
+defmodule WasmdomeWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :wasmdome
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
@@ -10,7 +10,7 @@ defmodule NatsLiveviewWeb.Endpoint do
     signing_salt: "WXfgFXmt"
   ]
 
-  socket "/socket", NatsLiveviewWeb.UserSocket,
+  socket "/socket", WasmdomeWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -23,7 +23,7 @@ defmodule NatsLiveviewWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :nats_liveview,
+    from: :wasmdome,
     gzip: false,
     only: ~w(css fonts images js coreui favicon.ico robots.txt)
 
@@ -46,5 +46,5 @@ defmodule NatsLiveviewWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug NatsLiveviewWeb.Router
+  plug WasmdomeWeb.Router
 end

@@ -1,4 +1,4 @@
-defmodule NatsLiveview.Application do
+defmodule Wasmdome.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -13,22 +13,22 @@ defmodule NatsLiveview.Application do
         id: Gnat,
         start: {Gnat, :start_link, [%{host: '127.0.0.1', port: 4222}, [name: Gnat]]}
       },
-      {NatsLiveview.GnatSubscriber, [topic: "wasmdome.match_events.*"]},
-      NatsLiveviewWeb.Endpoint
+      {Wasmdome.GnatSubscriber, [topic: "wasmdome.match_events.*"]},
+      WasmdomeWeb.Endpoint
       # Starts a worker by calling: NatsLiveview.Worker.start_link(arg)
       # {NatsLiveview.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: NatsLiveview.Supervisor]
+    opts = [strategy: :one_for_one, name: Wasmdome.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    NatsLiveviewWeb.Endpoint.config_change(changed, removed)
+    WasmdomeWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

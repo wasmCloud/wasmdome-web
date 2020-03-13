@@ -1,4 +1,4 @@
-defmodule NatsLiveview do
+defmodule Wasmdome do
   @moduledoc """
   NatsLiveview keeps the contexts that define your domain
   and business logic.

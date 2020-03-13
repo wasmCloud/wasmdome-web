@@ -1,4 +1,4 @@
-defmodule NatsLiveviewWeb.NatLive do
+defmodule WasmdomeWeb.NatLive do
   use Phoenix.LiveView
   require Logger
 
@@ -42,7 +42,7 @@ defmodule NatsLiveviewWeb.NatLive do
       # the channel so the handle_info functions can set up our state.
       
       # TODO: set this subscription up to take the match Id as a parameter from the page params
-      :ok = Phoenix.PubSub.subscribe(NatsLiveview.PubSub, "gnat:wasmdome.match_events.#{params["match_id"]}.replay")
+      :ok = Phoenix.PubSub.subscribe(Wasmdome.PubSub, "gnat:wasmdome.match_events.#{params["match_id"]}.replay")
     end
 
     {:ok, assign(socket, events: [], players: %{}, tindex: 1000, match_id: params["match_id"], board: %{}, pieces: [])}

@@ -1,6 +1,6 @@
-defmodule NatsLiveviewWeb.AuthController do
-    use NatsLiveviewWeb, :controller
-    alias NatsLiveviewWeb.Router.Helpers
+defmodule WasmdomeWeb.AuthController do
+    use WasmdomeWeb, :controller
+    alias WasmdomeWeb.Router.Helpers
   
     plug Ueberauth
   

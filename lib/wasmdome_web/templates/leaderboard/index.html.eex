@@ -1,0 +1,7 @@
+<h1>Leaderboard</h1>
+
+<%= for entry <- @entries do %>
+<img src="<%= Routes.static_path(@conn, "/images/avatars/#{entry.avatar}.png")%>" />
+<%= entry.name %>
+<pre><%= inspect entry %></pre>
+<% end %>

@@ -1,5 +1,5 @@
-defmodule NatsLiveviewWeb.Router do
-  use NatsLiveviewWeb, :router
+defmodule WasmdomeWeb.Router do
+  use WasmdomeWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,7 +13,7 @@ defmodule NatsLiveviewWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/auth", NatsLiveviewWeb do
+  scope "/auth", WasmdomeWeb do
     pipe_through :browser
 
     get "/:provider", AuthController, :request 
@@ -21,16 +21,18 @@ defmodule NatsLiveviewWeb.Router do
     post "/:provider/callback", AuthController, :callback
   end
 
-  scope "/", NatsLiveviewWeb do
+  scope "/", WasmdomeWeb do
     pipe_through :browser    
 
     get "/", PageController, :index
-    live "/matches/:match_id", NatLive
     get "/logout", AuthController, :logout
+    get "/leaderboard", LeaderboardController, :index
+    live "/matches/:match_id", NatLive
+    
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", NatsLiveviewWeb do
+  # scope "/api", WasmdomeWeb do
   #   pipe_through :api
   # end
 end

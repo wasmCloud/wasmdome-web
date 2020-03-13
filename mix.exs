@@ -1,9 +1,9 @@
-defmodule NatsLiveview.MixProject do
+defmodule Wasmdome.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :nats_liveview,
+      app: :wasmdome,
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -18,7 +18,7 @@ defmodule NatsLiveview.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {NatsLiveview.Application, []},
+      mod: {Wasmdome.Application, []},
       extra_applications: [:ueberauth, :ueberauth_auth0, :logger, :runtime_tools]
     ]
   end

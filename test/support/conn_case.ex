@@ -1,4 +1,4 @@
-defmodule NatsLiveviewWeb.ConnCase do
+defmodule WasmdomeWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule NatsLiveviewWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use NatsLiveviewWeb.ConnCase, async: true`, although
+  by setting `use WasmdomeWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,10 +21,10 @@ defmodule NatsLiveviewWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias NatsLiveviewWeb.Router.Helpers, as: Routes
+      alias WasmdomeWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint NatsLiveviewWeb.Endpoint
+      @endpoint WasmdomeWeb.Endpoint
     end
   end
 

@@ -1,5 +1,5 @@
-defmodule NatsLiveviewWeb.ErrorView do
-  use NatsLiveviewWeb, :view
+defmodule WasmdomeWeb.ErrorView do
+  use WasmdomeWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.
