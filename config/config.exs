@@ -8,11 +8,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :nats_liveview, NatsLiveviewWeb.Endpoint,
+config :wasmdome, WasmdomeWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "aY2Ox/he8AyPnFQattYyvC7aPZ3BohhcVR7zp3KEkfpnoG+I5SrRXxMYGd3uFCHe",
-  render_errors: [view: NatsLiveviewWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: NatsLiveview.PubSub, adapter: Phoenix.PubSub.PG2],
+  render_errors: [view: WasmdomeWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Wasmdome.PubSub, adapter: Phoenix.PubSub.PG2],
   live_view: [signing_salt: "Z2+kZugq"]
 
 # Configures Elixir's Logger

@@ -1,3 +1,3 @@
-defmodule NatsLiveviewWeb.PageViewTest do
-  use NatsLiveviewWeb.ConnCase, async: true
+defmodule WasmdomeWeb.PageViewTest do
+  use WasmdomeWeb.ConnCase, async: true
 end
