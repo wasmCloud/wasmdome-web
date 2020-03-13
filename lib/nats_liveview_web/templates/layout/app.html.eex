@@ -21,7 +21,7 @@
         <ul class="c-sidebar-nav">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-speedometer"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-speedometer"></use>
                     </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
             <li class="c-sidebar-nav-title">Theme</li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
@@ -30,44 +30,44 @@
                     </svg> Colors</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="/coreui/icons/sprites/free.svg#cil-pencil"></use>
+                        <use xlink:href="/coreui/sprites/free.svg#cil-pencil"></use>
                     </svg> Typography</a></li>
             <li class="c-sidebar-nav-title">Components</li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-puzzle"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-puzzle"></use>
                     </svg> Base</a>
                 <ul class="c-sidebar-nav-dropdown-items">
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html">
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/breadcrumb.html">
                             Breadcrumb</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/cards.html"> Cards</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/carousel.html"> Carousel</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/cards.html"> Cards</a></li>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/carousel.html"> Carousel</a>
                     </li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/collapse.html"> Collapse</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/collapse.html"> Collapse</a>
                     </li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/jumbotron.html">
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/jumbotron.html">
                             Jumbotron</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/list-group.html"> List
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/list-group.html"> List
                             group</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/navs.html"> Navs</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/pagination.html">
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/navs.html"> Navs</a></li>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/pagination.html">
                             Pagination</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/popovers.html"> Popovers</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/popovers.html"> Popovers</a>
                     </li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/progress.html"> Progress</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/progress.html"> Progress</a>
                     </li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/scrollspy.html">
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/scrollspy.html">
                             Scrollspy</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/switches.html"> Switches</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/switches.html"> Switches</a>
                     </li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/tabs.html"> Tabs</a></li>
-                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/tooltips.html"> Tooltips</a>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/tabs.html"> Tabs</a></li>
+                    <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="coreui/base/tooltips.html"> Tooltips</a>
                     </li>
                 </ul>
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-cursor"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-cursor"></use>
                     </svg> Buttons</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html">
@@ -84,30 +84,30 @@
             </li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="charts.html">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-chart-pie"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-chart-pie"></use>
                     </svg> Charts</a></li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-code"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-code"></use>
                     </svg> Editors</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="editors/code-editor.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-notes"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-notes"></use>
                             </svg> Code Editor<span class="badge badge-danger">PRO</span></a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="editors/markdown-editor.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-code"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-code"></use>
                             </svg> Markdown<span class="badge badge-danger">PRO</span></a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="editors/text-editor.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-notes"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-notes"></use>
                             </svg> Rich Text Editor<span class="badge badge-danger">PRO</span></a></li>
                 </ul>
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-notes"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-notes"></use>
                     </svg> Forms</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="forms/basic-forms.html"> Basic
@@ -120,11 +120,11 @@
             </li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="google-maps.html">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-map"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-map"></use>
                     </svg> Google Maps<span class="badge badge-danger">PRO</span></a></li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-star"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-star"></use>
                     </svg> Icons</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="icons/coreui-icons-free.html">
@@ -137,7 +137,7 @@
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-bell"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-bell"></use>
                     </svg> Notifications</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="notifications/alerts.html">
@@ -152,26 +152,26 @@
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-bolt"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-bolt"></use>
                     </svg> Plugins</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="plugins/calendar.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg> Calendar<span class="badge badge-danger">PRO</span></a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="plugins/draggable-cards.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-cursor-move"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-cursor-move"></use>
                             </svg> Draggable<span class="badge badge-danger">PRO</span></a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="plugins/spinners.html">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-sync"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-sync"></use>
                             </svg> Spinners<span class="badge badge-danger">PRO</span></a></li>
                 </ul>
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-columns"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-columns"></use>
                     </svg> Tables</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="tables/tables.html"> Standard
@@ -182,41 +182,41 @@
             </li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="widgets.html">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-calculator"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-calculator"></use>
                     </svg> Widgets<span class="badge badge-info">NEW</span></a></li>
             <li class="c-sidebar-nav-divider"></li>
             <li class="c-sidebar-nav-title">Extras</li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-star"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-star"></use>
                     </svg> Pages</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="login.html" target="_top">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-account-logout"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-account-logout"></use>
                             </svg> Login</a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="register.html" target="_top">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-account-logout"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-account-logout"></use>
                             </svg> Register</a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="404.html" target="_top">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-bug"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-bug"></use>
                             </svg> Error 404</a></li>
                     <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="500.html" target="_top">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-bug"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-bug"></use>
                             </svg> Error 500</a></li>
                 </ul>
             </li>
             <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <svg class="c-sidebar-nav-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-layers"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-layers"></use>
                     </svg> Apps</a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-description"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-description"></use>
                             </svg> Invoicing</a>
                         <ul class="c-sidebar-nav-dropdown-items">
                             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link"
@@ -226,7 +226,7 @@
                     </li>
                     <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                             <svg class="c-sidebar-nav-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-envelope-open"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-envelope-open"></use>
                             </svg> Email</a>
                         <ul class="c-sidebar-nav-dropdown-items">
                             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="apps/email/inbox.html">
@@ -243,15 +243,15 @@
             <li class="c-sidebar-nav-title">Labels</li>
             <li class="c-sidebar-nav-item c-d-compact-none c-d-minimized-none"><a class="c-sidebar-nav-label" href="#">
                     <svg class="c-sidebar-nav-icon text-danger">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-bookmark"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-bookmark"></use>
                     </svg> Label danger</a></li>
             <li class="c-sidebar-nav-item c-d-compact-none c-d-minimized-none"><a class="c-sidebar-nav-label" href="#">
                     <svg class="c-sidebar-nav-icon text-info">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-bookmark"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-bookmark"></use>
                     </svg> Label info</a></li>
             <li class="c-sidebar-nav-item c-d-compact-none c-d-minimized-none"><a class="c-sidebar-nav-label" href="#">
                     <svg class="c-sidebar-nav-icon text-warning">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-bookmark"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-bookmark"></use>
                     </svg> Label warning</a></li>
             <li class="c-sidebar-nav-divider"></li>
             <li class="c-sidebar-nav-title">System Utilization</li>
@@ -284,21 +284,21 @@
         <button class="c-sidebar-close c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-show"
             responsive="true">
             <svg class="c-icon">
-                <use xlink:href="coreui/icons/sprites/free.svg#cil-x"></use>
+                <use xlink:href="coreui/sprites/free.svg#cil-x"></use>
             </svg>
         </button>
         <ul class="nav nav-tabs nav-underline nav-underline-primary" role="tablist">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
                     <svg class="c-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-list"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-list"></use>
                     </svg></a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab">
                     <svg class="c-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-speech"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-speech"></use>
                     </svg></a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#settings" role="tab">
                     <svg class="c-icon">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-settings"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-settings"></use>
                     </svg></a></li>
         </ul>
         <!-- Tab panes-->
@@ -313,10 +313,10 @@
                                 alt="user@email.com"></div>
                         <div>Meeting with <strong>Lucas</strong></div><small class="text-muted mr-3">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg>  1 - 3pm</small><small class="text-muted">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-location-pin"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-location-pin"></use>
                             </svg>  Palo Alto, CA</small>
                     </div>
                     <div class="list-group-item list-group-item-accent-info">
@@ -324,10 +324,10 @@
                                 alt="user@email.com"></div>
                         <div>Skype with <strong>Megan</strong></div><small class="text-muted mr-3">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg>  4 - 5pm</small><small class="text-muted">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-skype"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-skype"></use>
                             </svg>  On-line</small>
                     </div>
                     <div
@@ -336,10 +336,10 @@
                     <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
                         <div>New UI Project - <strong>deadline</strong></div><small class="text-muted mr-3">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg>  10 - 11pm</small><small class="text-muted">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-home"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-home"></use>
                             </svg>  creativeLabs HQ</small>
                         <div class="c-avatars-stack mt-2">
                             <div class="c-avatar c-avatar-xs"><img class="c-avatar-img" src="images/avatars/bot-2.png"
@@ -357,19 +357,19 @@
                     <div class="list-group-item list-group-item-accent-success list-group-item-divider">
                         <div><strong>#10 Startups.Garden</strong> Meetup</div><small class="text-muted mr-3">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg>  1 - 3pm</small><small class="text-muted">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-location-pin"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-location-pin"></use>
                             </svg>  Palo Alto, CA</small>
                     </div>
                     <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
                         <div><strong>Team meeting</strong></div><small class="text-muted mr-3">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-calendar"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-calendar"></use>
                             </svg>  4 - 6pm</small><small class="text-muted">
                             <svg class="c-icon">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-home"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-home"></use>
                             </svg>  creativeLabs HQ</small>
                         <div class="c-avatars-stack mt-2">
                             <div class="c-avatar c-avatar-xs"><img class="c-avatar-img" src="images/avatars/bot-2.png"
@@ -519,7 +519,7 @@
             <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
                 data-class="c-sidebar-show">
                 <svg class="c-icon c-icon-lg">
-                    <use xlink:href="coreui/icons/sprites/free.svg#cil-menu"></use>
+                    <use xlink:href="coreui/sprites/free.svg#cil-menu"></use>
                 </svg>
             </button><a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="#">
                 <svg width="118" height="46" alt="CoreUI Logo">
@@ -528,13 +528,14 @@
             <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar"
                 data-class="c-sidebar-lg-show" responsive="true">
                 <svg class="c-icon c-icon-lg">
-                    <use xlink:href="coreui/icons/sprites/free.svg#cil-menu"></use>
+                    <use xlink:href="coreui/sprites/free.svg#cil-menu"></use>
                 </svg>
             </button>
             <ul class="c-header-nav d-md-down-none">
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Home</a></li>
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Dashboard</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Users</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Leaderboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Documentation</a></li>
             </ul>
             <ul class="c-header-nav mfs-auto">
                 <li class="c-header-nav-item px-3 c-d-legacy-none">
@@ -542,10 +543,10 @@
                         data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom"
                         title="Toggle Light/Dark Mode">
                         <svg class="c-icon c-d-dark-none">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-moon"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-moon"></use>
                         </svg>
                         <svg class="c-icon c-d-default-none">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-sun"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-sun"></use>
                         </svg>
                     </button>
                 </li>
@@ -554,25 +555,25 @@
                 <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link"
                         data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-bell"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-bell"></use>
                         </svg><span class="badge badge-pill badge-danger">5</span></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                         <div class="dropdown-header bg-light"><strong>You have 5 notifications</strong></div><a
                             class="dropdown-item" href="#">
                             <svg class="c-icon mfe-2 text-success">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-user-follow"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-user-follow"></use>
                             </svg> New user registered</a><a class="dropdown-item" href="#">
                             <svg class="c-icon mfe-2 text-danger">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-user-unfollow"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-user-unfollow"></use>
                             </svg> User deleted</a><a class="dropdown-item" href="#">
                             <svg class="c-icon mfe-2 text-info">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-chart"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-chart"></use>
                             </svg> Sales report is ready</a><a class="dropdown-item" href="#">
                             <svg class="c-icon mfe-2 text-success">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-basket"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-basket"></use>
                             </svg> New client</a><a class="dropdown-item" href="#">
                             <svg class="c-icon mfe-2 text-warning">
-                                <use xlink:href="coreui/icons/sprites/free.svg#cil-speedometer"></use>
+                                <use xlink:href="coreui/sprites/free.svg#cil-speedometer"></use>
                             </svg> Server overloaded</a>
                         <div class="dropdown-header bg-light"><strong>Server</strong></div><a
                             class="dropdown-item d-block" href="#">
@@ -599,7 +600,7 @@
                 <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link"
                         data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-list-rich"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-list-rich"></use>
                         </svg><span class="badge badge-pill badge-warning">15</span></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                         <div class="dropdown-header bg-light"><strong>You have 5 pending tasks</strong></div><a
@@ -641,7 +642,7 @@
                 <li class="c-header-nav-item dropdown d-md-down-none mx-2"><a class="c-header-nav-link"
                         data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-envelope-open"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-envelope-open"></use>
                         </svg><span class="badge badge-pill badge-info">7</span></a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
                         <div class="dropdown-header bg-light"><strong>You have 4 messages</strong></div><a
@@ -710,41 +711,41 @@
                       <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a
                           class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-bell"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-bell"></use>
                         </svg> Updates<span class="badge badge-info mfs-auto">42</span></a><a class="dropdown-item"
                         href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-envelope-open"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-envelope-open"></use>
                         </svg> Messages<span class="badge badge-success mfs-auto">42</span></a><a
                         class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-task"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-task"></use>
                         </svg> Tasks<span class="badge badge-danger mfs-auto">42</span></a><a class="dropdown-item"
                         href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-comment-square"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-comment-square"></use>
                         </svg> Comments<span class="badge badge-warning mfs-auto">42</span></a>
                       <div class="dropdown-header bg-light py-2"><strong>Settings</strong></div><a
                           class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-user"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-user"></use>
                         </svg> Profile</a><a class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-settings"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-settings"></use>
                         </svg> Settings</a><a class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-credit-card"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-credit-card"></use>
                         </svg> Payments<span class="badge badge-secondary mfs-auto">42</span></a><a
                         class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-file"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-file"></use>
                         </svg> Projects<span class="badge badge-primary mfs-auto">42</span></a>
                       <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-lock-locked"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-lock-locked"></use>
                         </svg> Lock Account</a><a class="dropdown-item" href="#">
                         <svg class="c-icon mfe-2">
-                          <use xlink:href="coreui/icons/sprites/free.svg#cil-account-logout"></use>
+                          <use xlink:href="coreui/sprites/free.svg#cil-account-logout"></use>
                         </svg> Logout</a>
                     </div>
                   </li>
@@ -754,7 +755,7 @@
                <button class="c-header-toggler c-class-toggler mfe-md-3" type="button" data-target="#aside"
                     data-class="c-sidebar-show">
                     <svg class="c-icon c-icon-lg">
-                        <use xlink:href="coreui/icons/sprites/free.svg#cil-applications-settings"></use>
+                        <use xlink:href="coreui/sprites/free.svg#cil-applications-settings"></use>
                     </svg>
                 </button>
             </ul>
@@ -768,13 +769,13 @@
                 </ol>
                 <div class="c-subheader-nav d-md-down-none mfe-2"><a class="c-subheader-nav-link" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-speech"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-speech"></use>
                         </svg></a><a class="c-subheader-nav-link" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-graph"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-graph"></use>
                         </svg>  Dashboard</a><a class="c-subheader-nav-link" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="coreui/icons/sprites/free.svg#cil-settings"></use>
+                            <use xlink:href="coreui/sprites/free.svg#cil-settings"></use>
                         </svg>  Settings</a></div>
             </div>
         </header>
@@ -796,7 +797,7 @@
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg class="c-icon">
                                                     <use
-                                                        xlink:href="coreui/icons/sprites/free.svg#cil-settings">
+                                                        xlink:href="coreui/sprites/free.svg#cil-settings">
                                                     </use>
                                                 </svg>
                                             </button>
@@ -825,7 +826,7 @@
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg class="c-icon">
                                                     <use
-                                                        xlink:href="coreui/icons/sprites/free.svg#cil-settings">
+                                                        xlink:href="coreui/sprites/free.svg#cil-settings">
                                                     </use>
                                                 </svg>
                                             </button>
@@ -854,7 +855,7 @@
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg class="c-icon">
                                                     <use
-                                                        xlink:href="coreui/icons/sprites/free.svg#cil-settings">
+                                                        xlink:href="coreui/sprites/free.svg#cil-settings">
                                                     </use>
                                                 </svg>
                                             </button>
@@ -883,7 +884,7 @@
                                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <svg class="c-icon">
                                                     <use
-                                                        xlink:href="coreui/icons/sprites/free.svg#cil-settings">
+                                                        xlink:href="coreui/sprites/free.svg#cil-settings">
                                                     </use>
                                                 </svg>
                                             </button>
@@ -925,7 +926,7 @@
                                         <button class="btn btn-primary" type="button">
                                             <svg class="c-icon">
                                                 <use
-                                                    xlink:href="coreui/icons/sprites/free.svg#cil-cloud-download">
+                                                    xlink:href="coreui/sprites/free.svg#cil-cloud-download">
                                                 </use>
                                             </svg>
                                         </button>
@@ -986,7 +987,7 @@
                                     <div class="card-header bg-facebook content-center">
                                         <svg class="c-icon c-icon-3xl text-white my-4">
                                             <use
-                                                xlink:href="coreui/icons/sprites/brand.svg#cib-facebook-f">
+                                                xlink:href="coreui/sprites/brand.svg#cib-facebook-f">
                                             </use>
                                         </svg>
                                     </div>
@@ -1008,7 +1009,7 @@
                                 <div class="card">
                                     <div class="card-header bg-twitter content-center">
                                         <svg class="c-icon c-icon-3xl text-white my-4">
-                                            <use xlink:href="coreui/icons/sprites/brand.svg#cib-twitter">
+                                            <use xlink:href="coreui/sprites/brand.svg#cib-twitter">
                                             </use>
                                         </svg>
                                     </div>
@@ -1030,7 +1031,7 @@
                                 <div class="card">
                                     <div class="card-header bg-linkedin content-center">
                                         <svg class="c-icon c-icon-3xl text-white my-4">
-                                            <use xlink:href="coreui/icons/sprites/brand.svg#cib-linkedin">
+                                            <use xlink:href="coreui/sprites/brand.svg#cib-linkedin">
                                             </use>
                                         </svg>
                                     </div>
@@ -1212,7 +1213,7 @@
                                                     <div class="progress-group-header">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/free.svg#cil-user">
+                                                                xlink:href="coreui/sprites/free.svg#cil-user">
                                                             </use>
                                                         </svg>
                                                         <div>Male</div>
@@ -1230,7 +1231,7 @@
                                                     <div class="progress-group-header">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/free.svg#cil-user-female">
+                                                                xlink:href="coreui/sprites/free.svg#cil-user-female">
                                                             </use>
                                                         </svg>
                                                         <div>Female</div>
@@ -1248,7 +1249,7 @@
                                                     <div class="progress-group-header align-items-end">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-google">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-google">
                                                             </use>
                                                         </svg>
                                                         <div>Organic Search</div>
@@ -1267,7 +1268,7 @@
                                                     <div class="progress-group-header align-items-end">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-facebook-f">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-facebook-f">
                                                             </use>
                                                         </svg>
                                                         <div>Facebook</div>
@@ -1286,7 +1287,7 @@
                                                     <div class="progress-group-header align-items-end">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-twitter">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-twitter">
                                                             </use>
                                                         </svg>
                                                         <div>Twitter</div>
@@ -1305,7 +1306,7 @@
                                                     <div class="progress-group-header align-items-end">
                                                         <svg class="c-icon progress-group-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-linkedin">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-linkedin">
                                                             </use>
                                                         </svg>
                                                         <div>LinkedIn</div>
@@ -1330,7 +1331,7 @@
                                                     <th class="text-center">
                                                         <svg class="c-icon">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/free.svg#cil-people">
+                                                                xlink:href="coreui/sprites/free.svg#cil-people">
                                                             </use>
                                                         </svg>
                                                     </th>
@@ -1357,7 +1358,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-us">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-us">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1376,7 +1377,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-mastercard">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-mastercard">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1400,7 +1401,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-br">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-br">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1419,7 +1420,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-visa">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-visa">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1443,7 +1444,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-in">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-in">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1462,7 +1463,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-stripe">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-stripe">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1486,7 +1487,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-fr">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-fr">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1505,7 +1506,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-paypal">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-paypal">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1529,7 +1530,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-es">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-es">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1548,7 +1549,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-apple-pay">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-apple-pay">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1572,7 +1573,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/flag.svg#cif-pl">
+                                                                xlink:href="coreui/sprites/flag.svg#cif-pl">
                                                             </use>
                                                         </svg>
                                                     </td>
@@ -1591,7 +1592,7 @@
                                                     <td class="text-center">
                                                         <svg class="c-icon c-icon-xl">
                                                             <use
-                                                                xlink:href="coreui/icons/sprites/brand.svg#cib-cc-amex">
+                                                                xlink:href="coreui/sprites/brand.svg#cib-cc-amex">
                                                             </use>
                                                         </svg>
                                                     </td>
