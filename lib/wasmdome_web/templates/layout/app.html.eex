@@ -255,10 +255,10 @@
                     <use xlink:href="coreui/brand/coreui-pro.svg#full"></use>
                 </svg></a>
             <ul class="c-header-nav d-md-down-none">
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Home</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Dashboard</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Leaderboard</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Documentation</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/">Home</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/dashboard">Dashboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/leaderboard">Leaderboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/documentation">Documentation</a></li>
             </ul>
             <ul class="c-header-nav mfs-auto">
                 <li class="c-header-nav-item px-3 c-d-legacy-none">
