@@ -6,7 +6,7 @@
                 <tr>                
                 <th class="text-center table-big-column">
                     <svg class="c-icon">
-                    <use xlink:href="coreui/sprites/free.svg#cil-people"></use>
+                    <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-people") %>"></use>
                     </svg>
                 </th>
                 <th>Name</th>
