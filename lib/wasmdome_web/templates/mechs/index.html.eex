@@ -2,27 +2,26 @@
 
 
 <div class="row">
-<%= for {mech, idx} <- Enum.with_index(@mechs) do %>
+<%= for mech <- @mechs do %>
     <div class="col-sm-3 col-lg-5">
         <div class="card">
             <div class="card-header align-middle">                
-                <!--<span class="c-avatar"> <img class="c-avatar-img" src="<%= Routes.static_path(@conn, "/images/avatars/bot-3.png")%>"/> </span> -->
                 <b><%= mech.name %></b>
                 
                 <div class="card-header-actions">
                     <a class="card-header-action btn-setting" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="/coreui/sprites/free.svg#cil-settings"></use>
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-settings") %>"></use>
                         </svg>
                     </a>
                     <a class="card-header-action" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="/coreui/sprites/free.svg#cil-history"></use>
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-history") %>"></use>
                         </svg>
                     </a>
                     <a class="card-header-action" href="#">
                         <svg class="c-icon">
-                            <use xlink:href="/coreui/sprites/free.svg#cil-trash"></use>
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-trash") %>"></use>
                         </svg>
                     </a>
                 </div>
