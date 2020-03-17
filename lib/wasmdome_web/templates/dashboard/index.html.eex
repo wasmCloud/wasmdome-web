@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="card-header">
+        <b>WasmDome Match History</b>
+    </div>
+    <div class="card-body">
+
+    <table class="table table-responsive-sm table-outline table-striped table-hover">
+        <thead>
+            <tr>           
+            <th>Winner</th>
+            <th class="table-big-column">Mechs</th>
+            <th>Turns</th>
+            <th>Launched</th>
+            <th class="text-right">
+                Replay
+            </th>              
+            </tr>
+        </thead>
+        <tbody>
+        <%= for match <- @history do %>
+
+        <tr>
+            <td>
+                <div class="horizontal-center">
+                    <div class="c-avatar">
+                            <img class="c-avatar-img" 
+                                src="<%= Routes.static_path(@conn, "/images/avatars/#{elem(match.winner,1)}.png")%>">
+                    </div>
+                        <%= elem(match.winner,0) %>
+                </div>
+            </td>
+            <td>
+                <%= for {name, avatar} <- match.avatars do %>
+                    <div class="c-avatar">
+                        <img class="c-avatar-img" 
+                            alt="<%= name %>"
+                            title="<%= name %>" src="<%= Routes.static_path(@conn, "/images/avatars/#{avatar}.png")%>">
+                    </div>
+                <% end %>
+            </td>
+            <td><%= match.turns_used %> / <%= match.max_turns %></td>
+            <td><%= match.executed_on %></td>
+            <td class="text-right">
+                <svg class="c-icon">
+                    <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-video") %>"></use>
+                </svg>
+            </td>
+        </tr>
+
+        <% end %>
+        </tbody>
+    </table>
+
+    <nav aria-label="...">
+<ul class="pagination">
+<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Previous</a></li>
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item active"><a class="page-link" href="#">2<span class="sr-only">(current)</span></a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+
+    </div>
+</div>

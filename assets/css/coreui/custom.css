@@ -7,3 +7,10 @@ div.vertical-center {
     flex-direction: column;
     justify-content: center;
 }
+
+div.horizontal-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
