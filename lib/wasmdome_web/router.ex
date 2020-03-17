@@ -28,6 +28,7 @@ defmodule WasmdomeWeb.Router do
     get "/logout", AuthController, :logout
     get "/leaderboard", LeaderboardController, :index
     get "/me/mechs", MechsController, :index
+    get "/dashboard", DashboardController, :index
     live "/matches/:match_id", NatLive
     
   end

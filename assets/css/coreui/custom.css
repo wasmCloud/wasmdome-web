@@ -7,3 +7,9 @@ div.vertical-center {
     flex-direction: column;
     justify-content: center;
 }
+
+td.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
