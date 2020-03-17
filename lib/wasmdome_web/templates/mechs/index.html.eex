@@ -1,12 +1,8 @@
 <h1>My Mechs</h1>
 
 
+<div class="row">
 <%= for {mech, idx} <- Enum.with_index(@mechs) do %>
-    
-    <% if rem(idx, 3) == 0 do %>
-        <div class="row">
-    <% end %>
-
     <div class="col-sm-3 col-lg-5">
         <div class="card">
             <div class="card-header align-middle">                
@@ -57,14 +53,8 @@
             </div>
         </div>
     </div>
-
-    <% if rem(idx, 3) == 0 do %>
-        </div>
-    <% end %>
-
-
 <% end %>
-
+</div>
 
 
     
