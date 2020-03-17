@@ -41,12 +41,12 @@
                         <%= mech.matches %> matches
                     </div>
                     <div class="c-vr"></div>
-                    <div class="col align-middle">
+                    <div class="col vertical-center">
                         <div class="text-value-xl"><%= mech.kills %></div>
                         <div class="text-uppercase text-muted small">kills</div>
                     </div>
                     <div class="c-vr"></div>
-                    <div class="col">
+                    <div class="col vertical-center">
                         <div class="text-value-xl"><%= mech.deaths %></div>
                         <div class="text-uppercase text-muted small">deaths</div>
                     </div>
