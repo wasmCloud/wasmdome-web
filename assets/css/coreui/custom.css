@@ -1,3 +1,9 @@
 .small-table-column {
     max-width: 40px
 }
+
+div.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

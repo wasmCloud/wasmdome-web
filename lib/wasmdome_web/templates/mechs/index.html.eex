@@ -1,0 +1,60 @@
+<h1>My Mechs</h1>
+
+
+<div class="row">
+<%= for {mech, idx} <- Enum.with_index(@mechs) do %>
+    <div class="col-sm-3 col-lg-5">
+        <div class="card">
+            <div class="card-header align-middle">                
+                <!--<span class="c-avatar"> <img class="c-avatar-img" src="<%= Routes.static_path(@conn, "/images/avatars/bot-3.png")%>"/> </span> -->
+                <b><%= mech.name %></b>
+                
+                <div class="card-header-actions">
+                    <a class="card-header-action btn-setting" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="/coreui/sprites/free.svg#cil-settings"></use>
+                        </svg>
+                    </a>
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="/coreui/sprites/free.svg#cil-history"></use>
+                        </svg>
+                    </a>
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="/coreui/sprites/free.svg#cil-trash"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body text-center">
+                <div class="row">
+                    <div class="col">
+                        <span class="c-avatar">
+                            <img class="c-avatar-img" src="<%= Routes.static_path(@conn, "/images/avatars/#{mech.avatar}.png")%>"/>
+                        </span><br/>
+                        <b><%= mech.points %> pts</b><br/>
+                        <%= mech.matches %> matches
+                    </div>
+                    <div class="c-vr"></div>
+                    <div class="col vertical-center">
+                        <div class="text-value-xl"><%= mech.kills %></div>
+                        <div class="text-uppercase text-muted small">kills</div>
+                    </div>
+                    <div class="c-vr"></div>
+                    <div class="col vertical-center">
+                        <div class="text-value-xl"><%= mech.deaths %></div>
+                        <div class="text-uppercase text-muted small">deaths</div>
+                    </div>
+                </div>               
+            </div>
+            <div class="card-footer text-muted small">
+                <%= mech.subject %>&nbsp;rev&nbsp;<%= mech.revision %>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
+
+
+    

@@ -286,7 +286,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right pt-0">
                       <div class="dropdown-header bg-light py-2"><strong><%= @current_user.name %></strong></div><a
-                          class="dropdown-item" href="#">
+                          class="dropdown-item" href="/me/mechs">
                         <svg class="c-icon mfe-2">
                           <use xlink:href="coreui/sprites/free.svg#cil-3d"></use>
                         </svg> My Mechs</a>
