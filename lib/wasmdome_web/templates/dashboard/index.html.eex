@@ -21,12 +21,12 @@
 
         <tr>
             <td>
-                <div class="c-avatar">
-                        <img class="c-avatar-img" 
-                             src="<%= Routes.static_path(@conn, "/images/avatars/#{elem(match.winner,1)}.png")%>">
-                </div>
-                <div>
-                    <%= elem(match.winner,0) %>
+                <div class="horizontal-center">
+                    <div class="c-avatar">
+                            <img class="c-avatar-img" 
+                                src="<%= Routes.static_path(@conn, "/images/avatars/#{elem(match.winner,1)}.png")%>">
+                    </div>
+                        <%= elem(match.winner,0) %>
                 </div>
             </td>
             <td>

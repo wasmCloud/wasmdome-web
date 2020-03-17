@@ -8,8 +8,9 @@ div.vertical-center {
     justify-content: center;
 }
 
-td.vertical-center {
+div.horizontal-center {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
