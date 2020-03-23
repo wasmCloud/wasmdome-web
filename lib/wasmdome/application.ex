@@ -14,9 +14,8 @@ defmodule Wasmdome.Application do
         start: {Gnat, :start_link, [%{host: '127.0.0.1', port: 4222}, [name: Gnat]]}
       },
       {Wasmdome.GnatSubscriber, [topic: "wasmdome.match_events.*"]},
-      WasmdomeWeb.Endpoint
-      # Starts a worker by calling: NatsLiveview.Worker.start_link(arg)
-      # {NatsLiveview.Worker, arg},
+      WasmdomeWeb.Endpoint,
+      {Wasmdome.Repo, []}      
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

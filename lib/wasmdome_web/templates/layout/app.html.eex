@@ -291,7 +291,7 @@
                           <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-3d") %>"></use>
                         </svg> My Mechs</a>
                       <a
-                          class="dropdown-item" href="#">
+                          class="dropdown-item" href="<%= Routes.static_path(@conn, "/me")%>">
                         <svg class="c-icon mfe-2">
                           <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-user") %>"></use>
                         </svg> Profile</a>

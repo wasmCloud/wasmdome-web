@@ -7,6 +7,16 @@
 # General application configuration
 use Mix.Config
 
+config :wasmdome, Wasmdome.Repo,
+  database: System.get_env("DB_NAME","wasmdome"),
+  username: System.get_env("DB_USER", "wasmdome"),
+  password: System.get_env("DB_PASS", "wasmdome"),
+  hostname: System.get_env("DB_HOST", "wopr")
+
+config :wasmdome,
+  ecto_repos: [Wasmdome.Repo]
+
+
 # Configures the endpoint
 config :wasmdome, WasmdomeWeb.Endpoint,
   url: [host: "localhost"],

@@ -43,7 +43,10 @@ defmodule Wasmdome.MixProject do
       {:gnat, "~> 1.0.0"},
       {:ueberauth, "~> 0.6"},
       {:ueberauth_auth0, "~> 0.4"},
-      {:poison, "~> 4.0"}
+      {:poison, "~> 4.0"},
+      {:phoenix_ecto, "~> 4.1"},
+      {:ecto_sql, "~> 3.3"},
+      {:postgrex, "~> 0.15.3"}
     ]
   end
 end

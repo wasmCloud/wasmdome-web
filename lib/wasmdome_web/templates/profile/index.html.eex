@@ -1,0 +1,71 @@
+<h1>My Profile</h1>
+    
+<%= if  @profile do %>
+    <div class="card">
+        <div class="card-header">
+            <strong>waSCC Official</strong>&nbsp;&nbsp;<small>ACCOUNT</small>
+            <div class="card-header-actions">
+                 <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-pencil") %>"></use>
+                        </svg>
+                    </a>                    
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-trash") %>"></use>
+                        </svg>
+                    </a>
+            </div>
+        </div>
+        <div class="card-body">
+            
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Issuer</label>
+                    <div class="col-md-9">
+                        <p class="form-control-static">OAWETPB4Q67MOOFMP5YNXYBQ3PM3K2VXYDUVKUG2AOLRR5E74J3CIXAJ</p>                        
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Subject</label>
+                    <div class="col-md-9">
+                        <p class="form-control-static">ACOJJN6WUP4ODD75XEBKKTCCUJJCY5ZKQ56XVKYK4BEJWGVAOOQHZMCW</p>                        
+                    </div>
+                </div>
+
+                 <div class="form-group row">
+                    <label class="col-md-3 col-form-label">Display Name</label>
+                    <div class="col-md-9">
+                        <p class="form-control-static">Kevin Hoffman</p>                        
+                    </div>
+                </div>
+            </form>            
+        </div>
+    </div>
+<% else %>
+    <div class="card">
+        <div class="card-header">
+            <strong>None Set</strong>&nbsp;&nbsp;<small>ACCOUNT</small>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="jwt-input">Account JWT</label>
+                    <div class="col-md-9">
+                        <textarea id="jwt-input" class="form-control" name="jwt-input" rows="9" placeholder="Paste your account JWT here. Use `wascap gen account` to create one"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="name-input">Display Name</label>
+                    <div class="col-md-9">
+                        <input id="name-input" name="name-input" class="form-control" type="text" placeholder="Your public display name">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-success" type="submit">Save</button>
+            <button class="btn btn-sm btn-danger" type="reset">Reset</button>
+        </div>
+    </div>
+<% end %>
