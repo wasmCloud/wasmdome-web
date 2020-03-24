@@ -6,14 +6,12 @@ jobs:
   test:
     name: Test
     
-    services:  
+    services:
       nats:
-      image: nats
-      # Map port 8080 on the Docker host to port 80 on the nginx container
-      ports:
-        - 4222:4222
-        - 6222:6222
-        - 8222:8222                 
+        ports:
+          - 4222:4222
+          - 6222:6222
+          - 8222:8222      
 
     runs-on: ubuntu-latest
 
