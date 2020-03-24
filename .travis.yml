@@ -1,13 +1,14 @@
 language: elixir
-rust:
-  - stable
-jobs:
-  fast_finish: true
-services: docker
-before_install:
-- docker pull nats
-- docker run -p 4222:4222 -p 6222:6222 -p 8222:8222 -d nats
-elixir:
-  - '1.10.1'
-otp_release:
-  - '22.2'
+services:
+  - docker
+matrix:
+  include:
+    - language: rust
+    - language: elixir
+      before_install:
+      - docker pull nats
+      - docker run -p 4222:4222 -p 6222:6222 -p 8222:8222 -d nats
+      elixir:
+        - '1.10.1'
+      otp_release:
+        - '22.2'
