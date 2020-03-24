@@ -9,4 +9,10 @@ defmodule Wasmdome.Users.User do
 
         timestamps()
     end
+
+    def changeset(user, attrs) do
+        user
+        |> cast(attrs, [:displayname, :account_jwt])
+        |> validate_required([:displayname, :account_jwt])
+    end
 end

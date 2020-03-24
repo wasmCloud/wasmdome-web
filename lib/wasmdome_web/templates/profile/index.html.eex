@@ -5,7 +5,7 @@
         <div class="card-header">
             <strong><%= @account.name %></strong>&nbsp;&nbsp;<small>ACCOUNT</small>
             <div class="card-header-actions">
-                 <a class="card-header-action" href="#">
+                 <a class="card-header-action" href="/profile/edit">
                         <svg class="c-icon">
                             <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-pencil") %>"></use>
                         </svg>

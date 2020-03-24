@@ -25,7 +25,7 @@ defmodule WasmdomeWeb do
       import WasmdomeWeb.Gettext
       import Phoenix.LiveView.Controller
       alias WasmdomeWeb.Router.Helpers, as: Routes
-      import WasmdomeWeb.Auth , only: [authenticate: 2]
+      import WasmdomeWeb.Auth , only: [authenticate: 2, allow_anonymous: 2]
     end
   end
 

@@ -18,4 +18,14 @@ defmodule WasmdomeWeb.Auth do
            |> assign(:current_user, user)
         end
     end    
+
+    def allow_anonymous(conn, _params) do
+        user = get_session(conn, :current_user)
+        case user do
+        nil -> 
+            conn |> assign(:current_user, nil)
+        _ ->
+            conn |> assign(:current_user, user)
+        end
+    end
 end

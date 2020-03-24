@@ -1,0 +1,28 @@
+<h1>My Profile</h1>
+    
+<div class="card">
+        <div class="card-header">
+            &nbsp;&nbsp;<small>EDITING PROFILE</small>
+        </div>
+        <div class="card-body">
+            <%= form_for @changeset, Routes.profile_path(@conn, :update), fn f -> %>
+            <!--<form class="form-horizontal" action="/profile" method="post" enctype="multipart/form-data"> -->
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="jwt-input">Account JWT</label>
+                    <div class="col-md-9">
+                        <%= textarea f, :account_jwt, placeholder: "Paste your account JWT here.", class: "form-control", rows: 9 %>                    
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="name-input">Display Name</label>
+                    <div class="col-md-9">
+                        <%= text_input f, :displayname, placeholder: "Your public display name", class: "form-control" %>
+                    </div>
+                </div>            
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-sm btn-success" type="submit">Save</button>
+            <button class="btn btn-sm btn-danger" type="reset">Reset</button>
+        </div>
+        <% end %>
+    </div>
