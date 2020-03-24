@@ -5,12 +5,6 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
-    services:
-      nats:
-        ports:
-          - 6222:6222
-          - 4222:4222
-          - 8222:8222
 
     runs-on: ubuntu-latest
 
