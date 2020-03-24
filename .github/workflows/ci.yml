@@ -5,6 +5,15 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
+    
+    services:  
+      nats:
+      image: nats
+      # Map port 8080 on the Docker host to port 80 on the nginx container
+      ports:
+        - 4222:4222
+        - 6222:6222
+        - 8222:8222                 
 
     runs-on: ubuntu-latest
 
@@ -22,10 +31,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          override: true
-
-      - name: Start NATS
-        run: docker run -p 4222:4222 -p 6222:6222 -p 8222:8222 -d nats
-        
+          override: true      
+    
       - run: mix deps.get
       - run: mix test
