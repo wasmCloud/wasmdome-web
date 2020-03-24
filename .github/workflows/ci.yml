@@ -5,13 +5,12 @@ on: [push, pull_request]
 jobs:
   test:
     name: Test
-    
     services:
       nats:
         ports:
-          - 4222:4222
           - 6222:6222
-          - 8222:8222      
+          - 4222:4222
+          - 8222:8222
 
     runs-on: ubuntu-latest
 
@@ -29,7 +28,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-          override: true      
-    
+          override: true
+
       - run: mix deps.get
       - run: mix test
