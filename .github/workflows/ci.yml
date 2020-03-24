@@ -24,5 +24,8 @@ jobs:
           toolchain: stable
           override: true
 
+      - name: Start NATS
+        run: docker run -p 4222:4222 -p 6222:6222 -p 8222:8222 -d nats
+        
       - run: mix deps.get
       - run: mix test
