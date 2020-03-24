@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/wascc/wasmdome-web.svg?branch=master)](https://travis-ci.org/wascc/wasmdome-web)
+![CI](https://github.com/wascc/wasmdome-web/workflows/CI/badge.svg)
 
 # Assembly Mechs: Beyond WasmDome
 
