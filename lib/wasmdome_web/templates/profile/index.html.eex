@@ -3,7 +3,7 @@
 <%= if  @profile do %>
     <div class="card">
         <div class="card-header">
-            <strong>waSCC Official</strong>&nbsp;&nbsp;<small>ACCOUNT</small>
+            <strong><%= @account.name %></strong>&nbsp;&nbsp;<small>ACCOUNT</small>
             <div class="card-header-actions">
                  <a class="card-header-action" href="#">
                         <svg class="c-icon">
@@ -17,29 +17,26 @@
                     </a>
             </div>
         </div>
-        <div class="card-body">
-            
+        <div class="card-body">            
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Issuer</label>
                     <div class="col-md-9">
-                        <p class="form-control-static">OAWETPB4Q67MOOFMP5YNXYBQ3PM3K2VXYDUVKUG2AOLRR5E74J3CIXAJ</p>                        
+                        <p class="form-control-static"><%= @account.issuer %></p>                        
                     </div>
                 </div>
 
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Subject</label>
                     <div class="col-md-9">
-                        <p class="form-control-static">ACOJJN6WUP4ODD75XEBKKTCCUJJCY5ZKQ56XVKYK4BEJWGVAOOQHZMCW</p>                        
+                        <p class="form-control-static"><%= @account.subject %></p>                        
                     </div>
-                </div>
-
+                </div>                
                  <div class="form-group row">
                     <label class="col-md-3 col-form-label">Display Name</label>
                     <div class="col-md-9">
-                        <p class="form-control-static">Kevin Hoffman</p>                        
+                        <p class="form-control-static"><%= @profile.displayname %></p>                        
                     </div>
-                </div>
-            </form>            
+                </div>            
         </div>
     </div>
 <% else %>
