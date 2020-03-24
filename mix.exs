@@ -7,9 +7,10 @@ defmodule Wasmdome.MixProject do
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      compilers: [:rustler, :phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      rustler_crates: [wasmdome_wascap: []],
+      deps: deps()      
     ]
   end
 
@@ -46,7 +47,8 @@ defmodule Wasmdome.MixProject do
       {:poison, "~> 4.0"},
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.3"},
-      {:postgrex, "~> 0.15.3"}
+      {:postgrex, "~> 0.15.3"},
+      {:rustler, "~> 0.22.0-rc.0"}
     ]
   end
 end
