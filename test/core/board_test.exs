@@ -89,9 +89,10 @@ defmodule Core.BoardTest do
         piece = Core.Mech.to_gridpiece(mech, board)
 
         # Origin of the domain model board is bottom left (0,0)
-        # Origin of the rendered game board is top left (0,0)
-        assert 23 = piece.column
-        assert 23 = piece.row
+        # A piece at the CSS grid "origin" must be (1, 24)
+        # FYI WHY IS CSS GRID 1-BASED INDEXING!?!? WHY WHY WHY
+        assert 1 = piece.column
+        assert 24 = piece.row
         assert "special" = piece.avatar
 
         mech = Core.Mech.new("MCPBZXJDXCWRJAOPHXCBGVU55BAKCQSNUXUQRKRLI6RWYRFJW7W64JH4",
@@ -99,14 +100,19 @@ defmodule Core.BoardTest do
                         avatar: "special",
                         position: {23,23})                        
         piece = Core.Mech.to_gridpiece(mech, board) 
-        assert 0 = piece.column
-        assert 0 = piece.row 
+        # (23,23) in the domain is the top right corner
+        # must be (24, 1) in CSS grid
+        assert 24 = piece.column
+        assert 1 = piece.row 
     end
 
     test "Retrieves a Game Piece by Position" do
         board = spawn_one(30,30)        
         assert :empty = Core.Board.piece_at(board, { 10, 20 })
-        assert %Core.Gridpiece{column: 24, row: 24} = Core.Board.piece_at(board, { 5,5 })
+        assert %Core.Gridpiece{column: 6, row: 25, 
+                               avatar: "turret-1", 
+                               name: "testo", 
+                               original_position: {5,5}} = Core.Board.piece_at(board, { 5,5 })
     end
 
     test "Prepares a Ready-to-Render List of Board Pieces" do
@@ -117,8 +123,8 @@ defmodule Core.BoardTest do
                 :empty, :empty, :empty, :empty, :empty, :empty, 
                 :empty, :empty, :empty, :empty, :empty, :empty, 
                 :empty, :empty, :empty, :empty, :empty, 
-                    %Core.Gridpiece{avatar: "turret-1", column: 0, row: 0}] = 
-                Core.Board.render_pieces(board)
+                    %Core.Gridpiece{avatar: "turret-1", column: 6, row: 1}] = 
+                Core.Board.render_pieces(board)  # (6,1) in the CSS grid is (0,0) on a 6x6 board
     end
 
 
@@ -136,7 +142,8 @@ defmodule Core.BoardTest do
                                     "position" => %{"x" => 5, "y" => 5},
                                     "team" => "earth",
                                     "avatar" => "turret-1",
-                                    "name" => "testo"                              
+                                    "name" => "testo",
+                                    "health" => 1000                              
                                     }}},
                             topic: "wasmdome.match_events.45.replay"}, 1)
             

@@ -39,8 +39,8 @@ defmodule Core.Mech do
     # valid positions are 0..x:max-1, 0..y:max-1
     def to_gridpiece(mech, board) do        
         %Core.Gridpiece{        
-            column: elem(mech.position, 1),
-            row: elem(mech.position, 0),
+            column: elem(mech.position, 0) +1,
+            row: (board.height - 1) - elem(mech.position, 1) +1,
             original_position: mech.position,
             avatar: "#{mech.avatar}",
             name: mech.name

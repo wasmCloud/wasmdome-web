@@ -22,7 +22,7 @@ defmodule WasmdomeWeb.ReplayController do
 
       board = spawn(board, "boylur", "boylur", "boylur", "Boylur Plait", 200,9, 9)
 
-      # put at bottom left
+      # put at bottom right
       board = spawn(board, "kodefriez", "kodefriez", "boylur", "Kode Friez", 500, 23, 0)
       board = spawn(board, "deployjenkins", "deployjenkins", "boylur", "Deeploy Jennkins", 1000,11, 11)
 
