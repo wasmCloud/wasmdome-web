@@ -1,8 +1,6 @@
 defmodule WasmdomeWeb.ReplayController do
     use WasmdomeWeb, :controller
-    alias Core.Board
-
-    plug :authenticate 
+    alias Core.Board    
   
     def index(conn, params) do        
     

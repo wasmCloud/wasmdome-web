@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%= assigns[:page_title] || "Assembly Mechs: Beyond WasmDome" %></title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <%= csrf_meta_tag() %>
+  </head>
+  <body class="c-app">
+   
+    <div class="c-wrapper">
+        <header class="c-header c-header-light c-header-fixed">
+            <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
+                data-class="c-sidebar-show">
+                <svg class="c-icon c-icon-lg">
+                    <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-menu") %>"></use>
+                </svg>
+            </button><a class="c-header-brand d-lg-none c-header-brand-sm-up-center" href="#">
+                <svg width="118" height="46" alt="CoreUI Logo">
+                    <use xlink:href="<%= Routes.static_path(@conn, "/coreui/brand/coreui-pro.svg#full") %>"></use>
+                </svg></a>
+            <ul class="c-header-nav d-md-down-none">
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/">Home</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/dashboard">Dashboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/leaderboard">Leaderboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/documentation">Documentation</a></li>
+            </ul>
+            <ul class="c-header-nav mfs-auto">
+                <li class="c-header-nav-item px-3 c-d-legacy-none">
+                    <button class="c-class-toggler c-header-nav-btn" type="button" id="header-tooltip"
+                        data-target="body" data-class="c-dark-theme" data-toggle="c-tooltip" data-placement="bottom"
+                        title="Toggle Light/Dark Mode">
+                        <svg class="c-icon c-d-dark-none">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-moon") %>"></use>
+                        </svg>
+                        <svg class="c-icon c-d-default-none">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-sun") %>"></use>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+            <ul class="c-header-nav">
+                                                
+                <%# ACCOUNT %>
+                <%= if @current_user do %>                  
+                  <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="true" aria-expanded="false">
+                        <div class="c-avatar"><img class="c-avatar-img" src="<%= @current_user.avatar %>"
+                                alt="<%= @current_user.name %>"></div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right pt-0">
+                      <div class="dropdown-header bg-light py-2"><strong><%= @current_user.name %></strong></div><a
+                          class="dropdown-item" href="/my/mechs">
+                        <svg class="c-icon mfe-2">
+                          <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-3d") %>"></use>
+                        </svg> My Mechs</a>
+                      <a
+                          class="dropdown-item" href="<%= Routes.static_path(@conn, "/my/profile")%>">
+                        <svg class="c-icon mfe-2">
+                          <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-user") %>"></use>
+                        </svg> Profile</a>
+                      <div class="dropdown-divider"></div><a class="dropdown-item" href="/logout">
+                        <svg class="c-icon mfe-2">
+                          <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-account-logout") %>"></use>
+                        </svg> Logout</a>
+                    </div>
+                  </li>
+                <% else %>
+                  <li class="c-header-nav-item"><a class="c-header-nav-link" href="/auth/auth0">Login</a></li>
+                <% end %>
+               
+            </ul>
+        </header>
+        <div class="c-body">
+            <main class="c-main">
+                <div class="container-fluid">
+                    <div class="fade-in">                        
+                        <%= @inner_content %>
+                    </div>
+                </div>
+            </main>
+            <footer class="c-footer">
+                <div><b>Assembly Mechs: Beyond Wasmdome</b> &copy; 2020 Capital One Services, LLC</div>
+                <div class="mfs-auto">Powered by&nbsp;<a href="https://wascc.dev">waSCC</a></div>
+            </footer>
+        </div>
+    </div>
+    <!-- CoreUI and necessary plugins-->
+    <%# <script src="coreui/coreui-pro/dist/js/coreui.bundle.min.js"></script> %>
+    <!--[if IE]><!-->
+    <%# <script src="coreui/icons/js/svgxuse.min.js"></script> %>
+    <!--<![endif]-->
+    <!-- Plugins and scripts required by this view-->
+    <%# <script src="coreui/chartjs/dist/js/coreui-chartjs.bundle.js"></script>
+    <script src="coreui/utils/dist/coreui-utils.js"></script> %>
+    <%# <script src="js/main.js"></script> %>
+
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

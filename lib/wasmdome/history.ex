@@ -1,9 +1,9 @@
-defmodule Wasmdome.Dashboard do
+defmodule Wasmdome.History do
     @moduledoc """
-    The dashboard context
+    The history context
     """
 
-    alias Wasmdome.Dashboard.MatchSummary
+    alias Wasmdome.History.MatchSummary
 
     def match_history do        
         [

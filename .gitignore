@@ -39,3 +39,5 @@ native/**/target
 **/*rs.bk
 Cargo.lock
 priv/native/*
+
+.elixir_ls/

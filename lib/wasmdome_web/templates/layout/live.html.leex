@@ -1,0 +1,8 @@
+<%
+ lfi = live_flash(@conn, :info)
+ lfe = live_flash(@conn, :error)
+%>
+<%= if lfi do %><p class="alert alert-info" role="alert"><%= lfi %></p><%end%>
+<%= if lfe do %><p class="alert alert-danger" role="alert"><%= lfe %></p><%end%>
+
+<%= @inner_content %>

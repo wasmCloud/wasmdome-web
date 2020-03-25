@@ -1,9 +1,7 @@
 defmodule WasmdomeWeb.ProfileController do
     use WasmdomeWeb, :controller
     alias Wasmdome.Users
-    alias Wasmdome.Users.User
-
-    plug :authenticate # when action in []    
+    alias Wasmdome.Users.User    
   
     def index(conn, _params) do        
       profile = conn.assigns.current_user |> Wasmdome.Users.get_user_for_oauth    

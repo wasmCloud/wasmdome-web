@@ -1,7 +1,5 @@
 defmodule WasmdomeWeb.PageController do
-  use WasmdomeWeb, :controller
-
-  plug :allow_anonymous 
+  use WasmdomeWeb, :controller  
 
   def index(conn, _params) do
     render conn, "index.html"
