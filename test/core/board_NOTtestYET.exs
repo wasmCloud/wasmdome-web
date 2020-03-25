@@ -92,7 +92,7 @@ defmodule Core.BoardTest do
         # Origin of the rendered game board is top left (0,0)
         assert 23 = piece.column
         assert 23 = piece.row
-        assert "special-earth" = piece.avatar
+        assert "special" = piece.avatar
 
         mech = Core.Mech.new("MCPBZXJDXCWRJAOPHXCBGVU55BAKCQSNUXUQRKRLI6RWYRFJW7W64JH4",
                         name: "test",
@@ -117,7 +117,7 @@ defmodule Core.BoardTest do
                 :empty, :empty, :empty, :empty, :empty, :empty, 
                 :empty, :empty, :empty, :empty, :empty, :empty, 
                 :empty, :empty, :empty, :empty, :empty, 
-                    %Core.Gridpiece{avatar: "turret-1-earth", column: 0, row: 0}] = 
+                    %Core.Gridpiece{avatar: "turret-1", column: 0, row: 0}] = 
                 Core.Board.render_pieces(board)
     end
 

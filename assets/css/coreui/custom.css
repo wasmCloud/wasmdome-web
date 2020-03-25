@@ -14,3 +14,16 @@ div.horizontal-center {
     justify-content: flex-start;
     align-items: center;
 }
+
+div.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.game-board {
+    border: 2px solid black;    
+    display: grid;    
+    background-image: url("/images/sprite_tile.png");
+    background-repeat: repeat;
+}

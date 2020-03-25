@@ -33,14 +33,17 @@ defmodule Core.Mech do
         :empty
     end
 
-    # On a 24x24 board, the domain model origin 0,0 is the bottom left corner
-    # Bottom left corner on a user-facing board is x:max, y:max
+    # On a 24x24 board, the domain model origin 0,0 is the bottom left corner  
+    # need to translate this to a row and column for a CSS grid. 
+    # TODO: verify that translation is correct  
     # valid positions are 0..x:max-1, 0..y:max-1
     def to_gridpiece(mech, board) do        
-        %Core.Gridpiece{
-            column: board.width - elem(mech.position, 0)-1,
-            row: board.height - elem(mech.position, 1)-1,
-            avatar: "#{mech.avatar}-#{mech.team}"
+        %Core.Gridpiece{        
+            column: elem(mech.position, 1),
+            row: elem(mech.position, 0),
+            original_position: mech.position,
+            avatar: "#{mech.avatar}",
+            name: mech.name
         }
     end    
 end

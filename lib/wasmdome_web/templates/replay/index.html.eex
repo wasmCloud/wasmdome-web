@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-9">
+        <div class="card card-accent-primary">
+            <div class="card-header">
+                <strong>Game Board</strong>&nbsp;&nbsp;<small>TURN 5 of 27</small>
+
+                <div class="card-header-actions">
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-media-skip-backward") %>"></use>
+                        </svg>
+                    </a>                    
+                    <a class="card-header-action" href="">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-media-step-backward") %>"></use>
+                        </svg>
+                    </a>
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-media-step-forward") %>"></use>
+                        </svg>
+                    </a>
+                    <a class="card-header-action" href="#">
+                        <svg class="c-icon">
+                            <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-media-skip-forward") %>"></use>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="game-board"
+                    style="grid-template-columns: <%= for _x <- 0..@board.width-1 do %> 32px <% end %>; grid-template-rows: <%= for _y <- 0..@board.height-1 do %> 32px <% end %>">
+
+                    <%= for piece <- @pieces do %>
+                    <%= if piece != :empty do %>
+                        <div style="grid-column: <%= piece.column%>; grid-row: <%= piece.row%>" class="middle">
+                            <img alt="<%= piece.name %> (<%=elem(piece.original_position,0)%>,<%=elem(piece.original_position,1)%>)"
+                                 title="<%= piece.name %> (<%=elem(piece.original_position,0)%>,<%=elem(piece.original_position,1)%>)"
+                                 src="<%= Routes.static_path(@conn, "/images/avatars/#{piece.avatar}.png") %>""/>
+                        </div>      
+                    <% end %>
+                    <% end %>
+
+
+                </div>                            
+            </div>    
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="card card-accent-secondary">
+            <div class="card-header">
+                <strong>Players</strong>
+            </div>
+            <div class="card-body">
+                <table class="table table-responsive-sm table-outline mb-0">
+                <tbody>
+                    <%= for player <- @players do %>
+                    <tr>
+                        <td class="text-center">
+                            <div class="c-avatar middle">
+                                <img alt="avatar"
+                                 src="<%= Routes.static_path(@conn, "/images/avatars/#{player.avatar}.png") %>""/>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 3px;"><%= player.name %></div>                            
+                            <div class="progress mb-3" style="height: 10px;">
+                                <div class="progress-bar <%= progress_color(player.health) %>" 
+                                     role="progressbar" 
+                                     style="width: <%= progress_width(player.health) %>%"
+                                     aria-valuenow="<%= player.health %>"                                     
+                                     aria-valuemin="0" aria-valuemax="1000"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

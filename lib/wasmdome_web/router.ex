@@ -34,6 +34,8 @@ defmodule WasmdomeWeb.Router do
     put "/profile", ProfileController, :update
 
     get "/dashboard", DashboardController, :index
+
+    get "/replay/:match_id/:turn", ReplayController, :index
     live "/matches/:match_id", NatLive
     
   end

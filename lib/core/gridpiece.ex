@@ -3,5 +3,7 @@ defmodule Core.Gridpiece do
         column
         row
         avatar
+        name
+        original_position
     )a
 end
