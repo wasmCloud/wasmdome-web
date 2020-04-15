@@ -22,8 +22,12 @@ div.middle {
 }
 
 div.game-board {
-    border: 2px solid black;    
-    display: grid;    
+    border: 2px solid black;
+    display: grid;
     background-image: url("/images/sprite_tile.png");
     background-repeat: repeat;
+}
+
+span.actor-name {
+    font-family: "Lucida Console", Monaco, monospace
 }

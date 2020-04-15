@@ -48,7 +48,7 @@ defmodule Wasmdome.MixProject do
       {:phoenix_ecto, "~> 4.1"},
       {:ecto_sql, "~> 3.3"},
       {:postgrex, "~> 0.15.3"},
-      {:rustler, "~> 0.22.0-rc.0"}
+      {:rustler, "~> 0.22.0-rc.0"},
     ]
   end
 end
