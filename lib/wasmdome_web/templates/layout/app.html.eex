@@ -1,6 +1,6 @@
 <%
  fi = get_flash(@conn, :info)
- fe = get_flash(@conn, :error)
+ fe = get_flash(@conn, :error) 
 %>
 <%= if fi do %><p class="alert alert-info" role="alert"><%= fi %></p><%end%>
 <%= if fe do %><p class="alert alert-danger" role="alert"><%= fe %></p><%end%>

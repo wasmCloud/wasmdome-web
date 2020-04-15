@@ -1,0 +1,18 @@
+<%= form_for @conn, Routes.mechs_path(@conn, :create), [multipart: true], fn f -> %>
+<div class="card">
+    <div class="card-header">
+        Upload a New Mech
+    </div>
+    <div class="card-body">        
+        <div class="form-group row">
+            <label class="col-md-3 col-form-label">Mech Actor Module</label>
+            <div class="col-md-9">
+                <%= file_input f, :actor_module, class: "form-control" %>
+            </div>
+        </div>        
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-sm btn-success" type="submit">Upload</button>        
+    </div>    
+</div>
+<% end %>  

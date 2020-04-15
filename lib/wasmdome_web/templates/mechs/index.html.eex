@@ -1,4 +1,9 @@
 <h1>My Mechs</h1>
+<h2>
+<form action="/my/mechs/upload">
+<%= button("New Mech", to: "/my/mechs/upload", method: :get, class: "btn btn-pill btn-success") %>
+</form>
+</h2>
 
 
 <div class="row">

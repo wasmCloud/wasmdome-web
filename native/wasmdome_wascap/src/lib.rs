@@ -1,5 +1,5 @@
 use wascap::prelude::{Account,Claims, validate_token}; // do not want the wascap Result type
-use rustler::NifStruct;
+use rustler::{NifStruct, Binary};
 use wascap::jwt::TokenValidation;
 
 #[rustler::nif]
@@ -23,7 +23,15 @@ fn validate_jwt(jwt: String) -> Result<ValidationResponse, String> {
     }
 }
 
-rustler::init!("Elixir.Wasmdome.Wascap", [decode_jwt, validate_jwt]);
+#[rustler::nif]
+fn extract_jwt(bytes: Binary) -> Result<String, String> {    
+    wascap::wasm::extract_claims(bytes.as_slice())
+        .map_err(|e| format!("{}", e))    
+        .and_then(|ot| ot.ok_or("No embedded token".to_string()))
+        .map(|t| t.jwt.to_string())        
+}
+
+rustler::init!("Elixir.Wasmdome.Wascap", [decode_jwt, validate_jwt, extract_jwt]);
 
 fn map_validation(tv: TokenValidation) -> ValidationResponse {
     ValidationResponse {
