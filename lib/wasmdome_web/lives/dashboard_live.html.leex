@@ -1,3 +1,45 @@
-<div>
-  <%= @testing %>    
+<div class="row">
+<%= for host <- @hosts do %>
+    <div class="col-sm-3 col-lg-5">
+      <div class="card">        
+        
+        <div class="card-header d-flex justify-content-between align-items-start text-white <%=host_bg(host)%>">          
+          <div>
+            <div class="text-value-md"><%= Enum.count(host.actors) %> / 7 Scheduled, <%= running_count(host) %> Running</div>
+            <div><%= host.host_id %></div>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-transparent dropdown-toggle p-0" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <svg class="c-icon">
+                <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-settings") %>"></use>
+            </svg>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Action</a><a class="dropdown-item" href="#">Another action</a><a class="dropdown-item" href="#">Something else here</a></div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <table class="table table-responsive-sm">
+            <thead></thead>
+            <tbody>
+              <%= for actor <- host.actors do %>
+                <tr>
+                  <td style="width: 64px; height: 20px;">
+                    <%= if actor.status == :loading do %>
+                      <img src="<%= Routes.static_path(@socket, "/images/loading_spin.gif") %>"/>
+                    <% else %>
+                      <svg class="c-icon" style="color: #2eb85c;">
+                        <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-mood-good") %>"></use>
+                     </svg>
+                    <% end %>                    
+                  </td>
+                  <td><span class="actor-name"><%= actor.name %></span></td>
+                </tr>
+              <% end %>
+            </tbody>            
+          </table>
+        </div>
+      </div>
+    </div>
+<% end %>
 </div>
