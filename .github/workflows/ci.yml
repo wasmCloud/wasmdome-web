@@ -4,13 +4,15 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: Test
+    name: Build and Test
     
     services:
       postgres:
         image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
         ports:
-          -  5432:5432       
+          -  5432:5432
       nats:
         image: nats
         ports: 
@@ -40,7 +42,7 @@ jobs:
       - name: Run tests
         run: mix test
         env:
-          DB_NAME: wasmdome
+          DB_NAME: postgres
           DB_USER: postgres
           DB_PASS: postgres
-          DB_HOST: localhost  
+          DB_HOST: 0.0.0.0  
