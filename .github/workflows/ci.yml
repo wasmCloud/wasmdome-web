@@ -7,6 +7,10 @@ jobs:
     name: Test
     
     services:
+      postgres:
+        image: postgres
+        ports:
+          -  5432:5432       
       nats:
         image: nats
         ports: 
@@ -33,4 +37,10 @@ jobs:
           override: true
 
       - run: mix deps.get
-      - run: mix test
+      - name: Run tests
+        run: mix test
+        env:
+          DB_NAME: wasmdome
+          DB_USER: postgres
+          DB_PASS: postgres
+          DB_HOST: localhost  
