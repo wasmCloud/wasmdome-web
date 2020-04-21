@@ -1,6 +1,6 @@
-defmodule Wasmdome.Wascap.Test do
+defmodule Wasmdome.Wascc.Test do
     use ExUnit.Case
-    alias Wasmdome.Wascap
+    alias Wasmdome.Wascc
 
     test "Properly decodes a JWT" do
         jwt = "eyJ0eXAiOiJqd3QiLCJhbGciOiJFZDI1NTE5In0.eyJqdGkiOiJtdmJ0eDZsU2RpRm9CQjNnWmU3UmR1IiwiaWF0IjoxNTg0OTkyMDAzLCJpc3MiOiJPQVdFVFBCNFE2N01PT0ZNUDVZTlhZQlEzUE0zSzJWWFlEVVZLVUcyQU9MUlI1RTc0SjNDSVhBSiIsInN1YiI6IkFDT0pKTjZXVVA0T0RENzVYRUJLS1RDQ1VKSkNZNVpLUTU2WFZLWUs0QkVKV0dWQU9PUUhaTUNXIiwid2FzY2FwIjp7Im5hbWUiOiJ3YVNDQyBPZmZpY2lhbCIsInZhbGlkX3NpZ25lcnMiOltdfX0.wFQ6_t6wGQ9NmE-uRRgOUAo2b18MlDHUAquHpoXyT5WKDdPNct5uRYhD-1zV4q7Is5bjGjYPRhnf7NCEsmCtBA"

@@ -1,4 +1,4 @@
-# NIF for Elixir.Wasmdome.Wascap
+# NIF for Elixir.Wasmdome.Wascc
 
 ## To build the NIF module:
 
@@ -9,7 +9,7 @@
 ## To load the NIF:
 
 ```elixir
-defmodule Wasmdome.Wascap do
+defmodule Wasmdome.Wascc do
     use Rustler, otp_app: :wasmdome, crate: "wasmdome_wascap"
 
     # When your NIF is loaded, it will override this function.

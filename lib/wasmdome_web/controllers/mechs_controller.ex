@@ -23,19 +23,19 @@ defmodule WasmdomeWeb.MechsController do
         {:ok,check} -> conn 
         |> put_flash(:info, "Uploaded mech #{check.claims.name} (#{check.claims.subject})")         
         {:error, reason} -> conn 
-        |> put_flash(:info, "Failed to upload mech:  #{reason}")         
+        |> put_flash(:error, "Failed to upload mech:  #{reason}")         
       end |> redirect(to: "/my/mechs")
     end
 
     defp extract_jwt({:ok, bytes}) do
-      case Wasmdome.Wascap.extract_jwt(bytes) do
+      case Wasmdome.Wascc.extract_jwt(bytes) do
         {:ok, jwt} -> {:ok, %Actorcheck{jwt: jwt, bytes: bytes}}
         {:error, reason} -> {:error, reason}
       end    
     end
 
     defp decode_jwt({:ok, %Actorcheck{} = check}) do
-      case Wasmdome.Wascap.decode_jwt(check.jwt) do
+      case Wasmdome.Wascc.decode_jwt(check.jwt) do
         {:ok, claims} -> {:ok, %Actorcheck{check | claims: claims }}
         {:error, reason} -> {:error, reason}
       end
@@ -45,7 +45,7 @@ defmodule WasmdomeWeb.MechsController do
     end
 
     defp validate_jwt({:ok, %Actorcheck{} = check}) do      
-      case Wasmdome.Wascap.validate_jwt(check.jwt) do
+      case Wasmdome.Wascc.validate_jwt(check.jwt) do
         {:ok, validation} -> {:ok, %Actorcheck{check | validation_result: validation }}
         {:error, reason} -> {:error, reason}
       end
@@ -71,8 +71,10 @@ defmodule WasmdomeWeb.MechsController do
     end
 
     defp upload_bytes({:ok, %Actorcheck{} = check}) do
-      IO.inspect check
-      {:ok, check}
+      case Wasmdome.Wascc.upload_module_to_gantry(check.claims.subject, check.bytes) do
+        {:ok} -> {:ok, check}
+        {:error, reason} -> {:error, reason}
+      end      
     end
     defp upload_bytes(fail) do
       fail

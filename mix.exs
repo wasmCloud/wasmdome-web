@@ -9,7 +9,7 @@ defmodule Wasmdome.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:rustler, :phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
-      rustler_crates: [wasmdome_wascap: []],
+      rustler_crates: [wasmdome_wascc: []],
       deps: deps()      
     ]
   end

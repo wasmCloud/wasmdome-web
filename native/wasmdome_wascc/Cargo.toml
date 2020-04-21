@@ -1,14 +1,15 @@
 [package]
-name = "wasmdome_wascap"
+name = "wasmdome_wascc"
 version = "0.1.0"
 authors = []
 edition = "2018"
 
 [lib]
-name = "wasmdome_wascap"
+name = "wasmdome_wascc"
 path = "src/lib.rs"
 crate-type = ["dylib"]
 
 [dependencies]
 rustler = "0.22.0-rc.0"
 wascap = "0.4.5"
+gantryclient = "0.0.4"

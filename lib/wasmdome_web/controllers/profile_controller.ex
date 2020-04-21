@@ -6,7 +6,7 @@ defmodule WasmdomeWeb.ProfileController do
     def index(conn, _params) do        
       profile = conn.assigns.current_user |> Wasmdome.Users.get_user_for_oauth    
       
-      {:ok, decoded} = Wasmdome.Wascap.decode_jwt(profile.account_jwt)
+      {:ok, decoded} = Wasmdome.Wascc.decode_jwt(profile.account_jwt)
       
       render conn, "index.html", profile: profile, account: decoded
     end
