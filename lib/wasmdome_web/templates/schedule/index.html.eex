@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header"><b>Match Schedule</b></div>
+    <div class="card-body">
+        <table class="table table-responsive-sm table-outline table-striped">
+            <thead class="thead-light">
+                <tr>              
+                <th class="text-center" width="150">                
+                    <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>                
+                </th>                  
+                <th class="text-center">Board Size</th>
+                <th class="text-center">Mechs</th>
+                <th class="text-center">Max Turns</th>                                                
+                <th class="text-right">Starts</th>
+                </tr>
+            </thead>
+            <tbody>
+            <%= for match <- @matches do %>
+                <tr>                
+                <td width="150">
+                <%= if match.starts_in_mins <= 20 && match.starts_in_mins > 0 && match.current_mechs < match.max_mechs do %>
+                    <%= form_for @conn, "compete", fn f -> %>
+                    <%= button "Compete!", to: "/arena/compete", method: "post", 
+                         class: "btn btn-pill btn-block btn-success active"%>
+                    <% end %> 
+                <% else %>
+                    <br/>
+                <% end %>                    
+                </td>
+                <td class="text-center">
+                    <div><%= match.board_width%> x <%= match.board_height%></div>
+                </td>
+                <td class="text-center">
+                    <div><b>
+                        <%= if match.starts_in_mins <= 20 && match.starts_in_mins > 0 do %>
+                            <%= match.current_mechs %> / <%= match.max_mechs %>
+                        <% else %>
+                            <%= match.max_mechs %> max
+                        <% end %>                         
+                    </b></div>
+                </td>
+                <td class="text-center">
+                    <%= match.max_turns %>
+                </td>                
+                <td class="text-right">
+                    <i><%= match.starts_in_friendly %></i>
+                </td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

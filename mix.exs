@@ -49,6 +49,7 @@ defmodule Wasmdome.MixProject do
       {:ecto_sql, "~> 3.3"},
       {:postgrex, "~> 0.15.3"},
       {:rustler, "~> 0.22.0-rc.0"},
+      {:timex, "~> 3.6"}
     ]
   end
 end

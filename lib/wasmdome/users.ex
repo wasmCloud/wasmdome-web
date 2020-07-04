@@ -7,7 +7,16 @@ defmodule Wasmdome.Users do
     end
     
     def get_user_for_oauth(token) do
-        Repo.get_by(User, oauth_id: token.id)
+        IO.inspect token
+        profile = Repo.get_by(User, oauth_id: token.id)
+        if !profile do
+            case Repo.insert %User{ oauth_id: token.id, displayname: "New User", account_jwt: ""} do 
+                {:ok, user} -> user
+                {:error, _changeset} -> nil
+            end        
+        else
+            profile
+        end        
     end
 
     def list_users do
@@ -16,8 +25,7 @@ defmodule Wasmdome.Users do
 
     def change_user(%User{} = user) do
         User.changeset(user, %{})
-      end
-      
+    end
     
     def update_user(%User{} = user, attrs \\ %{}) do
         user

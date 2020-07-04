@@ -20,7 +20,8 @@
             </button>
             <ul class="c-header-nav d-md-down-none">
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/">Home</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/dashboard">Dashboard</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/arena">Arena</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/arena/schedule">Match Schedule</a></li>
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/leaderboard">Leaderboard</a></li>
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/documentation">Documentation</a></li>
             </ul>

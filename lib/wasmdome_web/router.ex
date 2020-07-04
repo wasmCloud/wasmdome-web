@@ -34,17 +34,24 @@ defmodule WasmdomeWeb.Router do
   scope "/", WasmdomeWeb do
     pipe_through [:browser, :anonymous_allowed]
 
-    get "/",                        PageController, :index
-    get "/logout",                  AuthController, :logout    
+    get "/",                        PageController,       :index
+    get "/logout",                  AuthController,       :logout    
     
-    get "/leaderboard",             LeaderboardController, :index
+    get "/leaderboard",             LeaderboardController,:index
     
-    get "/history",                 HistoryController, :index
-    get "/replay/:match_id/:turn",  ReplayController, :index
-
+    get "/history",                 HistoryController,    :index
+    get "/replay/:match_id/:turn",  ReplayController,     :index
+    
     #live "/matches/:match_id", NatLive
     #live "/dashboard", DashboardLive, :index
 
+  end
+
+  scope "/arena", WasmdomeWeb do
+    pipe_through [:browser, :secure]
+
+    get "/schedule",                ScheduleController,   :index
+    post "/compete",                ScheduleController,   :compete
   end
 
   scope "/my", WasmdomeWeb do
@@ -55,7 +62,7 @@ defmodule WasmdomeWeb.Router do
     put "/profile", ProfileController, :update    
     get "/mechs", MechsController, :index
     get "/mechs/upload", MechsController, :new
-    post "/mechs/upload", MechsController, :create
+    post "/mechs/upload", MechsController, :create    
 
   end
 
