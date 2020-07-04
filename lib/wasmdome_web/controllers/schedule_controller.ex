@@ -14,7 +14,7 @@ defmodule WasmdomeWeb.ScheduleController do
       decoded = profile |> decode
       token = ScheduledMatches.generate_token(decoded.subject)
       if token do
-        conn |> put_flash(:info, "Good luck, Champion! To get your arena credentials, run: wasmdome compete #{decoded.subject} #{token}")
+        conn |> put_flash(:info, "Good luck, challenger! To get your arena credentials, run: wasmdome compete #{decoded.subject} #{token}")
       else
         conn |> put_flash(:error, "Sorry, we could not generate an access token for arena credentials")
       end

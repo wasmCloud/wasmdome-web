@@ -10,6 +10,7 @@ defmodule Wasmdome.GnatSubscriber do
     #Gnat.sub(Gnat, self(), "#{topic}")
     Gnat.sub(Gnat, self(), "wasmdome.match_events.*")
     Gnat.sub(Gnat, self(), "wasmdome.match_events.*.replay")
+    Gnat.sub(Gnat, self(), "wasmdome.public.arena.events")
   end
 
   # Rebroadcast the message into Phoenix's PubSub

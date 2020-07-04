@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header"> <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>&nbsp;&nbsp;<b>Arena Lobby</b></div>
+    <div class="card-body">
+        <table class="table table-responsive-sm table-outline table-striped">
+            <thead class="thead-light">
+                <tr>                     
+                <th width="40">
+                  <svg class="c-icon">
+                    <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-people") %>"></use>
+                  </svg>
+                </th>           
+                <th>Name</th>
+                <th>Team</th>                
+                </tr>
+            </thead>
+            <tbody>
+            <%= for mech <- @mechs do %>
+                <tr>                
+                <td class="text-center" width="40">
+                    <div class="c-avatar"><img class="c-avatar-img" src="<%= Routes.static_path(@socket, "/images/avatars/#{mech.avatar}.png")%>"/></div>
+                </td>
+                <td class="text-left">
+                    <div><b><%= mech.name %></b></div>
+                </td>
+                <td class="text-left">
+                    <%= if mech.team == "boylur" do %>
+                        Boylur Plait
+                    <% else %>
+                        Planet Earth
+                    <% end %>
+                </td>                
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

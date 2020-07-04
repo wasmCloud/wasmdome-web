@@ -52,17 +52,18 @@ defmodule WasmdomeWeb.Router do
 
     get "/schedule",                ScheduleController,   :index
     post "/compete",                ScheduleController,   :compete
+    live "/live",                   ArenaLive,            :index
   end
 
   scope "/my", WasmdomeWeb do
     pipe_through [:browser, :secure]
 
-    get "/profile", ProfileController, :index
-    get "/profile/edit", ProfileController, :edit
-    put "/profile", ProfileController, :update    
-    get "/mechs", MechsController, :index
-    get "/mechs/upload", MechsController, :new
-    post "/mechs/upload", MechsController, :create    
+    get "/profile",                 ProfileController, :index
+    get "/profile/edit",            ProfileController, :edit
+    put "/profile",                 ProfileController, :update    
+    get "/mechs",                   MechsController, :index
+ #   get "/mechs/upload",            MechsController, :new
+ #   post "/mechs/upload",           MechsController, :create    
 
   end
 
