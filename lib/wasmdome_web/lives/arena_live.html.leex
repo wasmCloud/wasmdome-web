@@ -1,37 +1,120 @@
-<div class="card">
-    <div class="card-header"> <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>&nbsp;&nbsp;<b>Arena Lobby</b></div>
-    <div class="card-body">
-        <table class="table table-responsive-sm table-outline table-striped">
-            <thead class="thead-light">
-                <tr>                     
-                <th width="40">
-                  <svg class="c-icon">
-                    <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-people") %>"></use>
-                  </svg>
-                </th>           
-                <th>Name</th>
-                <th>Team</th>                
-                </tr>
-            </thead>
-            <tbody>
-            <%= for mech <- @mechs do %>
-                <tr>                
-                <td class="text-center" width="40">
-                    <div class="c-avatar"><img class="c-avatar-img" src="<%= Routes.static_path(@socket, "/images/avatars/#{mech.avatar}.png")%>"/></div>
-                </td>
-                <td class="text-left">
-                    <div><b><%= mech.name %></b></div>
-                </td>
-                <td class="text-left">
-                    <%= if mech.team == "boylur" do %>
-                        Boylur Plait
-                    <% else %>
-                        Planet Earth
-                    <% end %>
-                </td>                
-                </tr>
-            <% end %>
-            </tbody>
-        </table>
+<%= if @next_match do %>
+    <%= if @next_match.starts_in_mins >= 0 && @next_match.starts_in_mins < 3 do %>
+        <div class="card text-white bg-gradient-danger">
+    <% else %>
+        <div class="card text-white bg-gradient-info">
+    <% end %>
+        <div class="card-body">
+            <div class="text-muted text-right mb-4">
+                <svg class="c-icon c-icon-2xl">
+                    <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-clock") %>"></use>
+                </svg>
+            </div>
+            <div class="text-value-lg">
+                <%= if @next_match.starts_in_mins <= 2 do %>
+                    any moment now...
+                <% else %>           
+                    <%= @next_match.starts_in_friendly %>
+                <% end %>
+            </div>
+            <small class="text-muted text-uppercase font-weight-bold">match starts</small>
+        </div>
     </div>
-</div>
+<% end %>
+
+<%= if !@running_match do %>
+    <div class="card">
+        <div class="card-header"> <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>&nbsp;&nbsp;<b>Arena Lobby</b></div>
+        <div class="card-body">
+            <table class="table table-responsive-sm table-outline table-striped">
+                <thead class="thead-light">
+                    <tr>                     
+                    <th width="40" class="text-center">
+                    <svg class="c-icon">
+                        <use xlink:href="<%= Routes.static_path(@socket, "/coreui/sprites/free.svg#cil-people") %>"></use>
+                    </svg>
+                    </th>           
+                    <th>Name</th>
+                    <th>Team</th>                
+                    </tr>
+                </thead>
+                <tbody>
+                <%= for mech <- @mechs do %>
+                    <tr>                
+                    <td class="text-center" width="40">
+                        <div class="c-avatar"><img class="c-avatar-img" src="<%= Routes.static_path(@socket, "/images/avatars/#{mech.avatar}.png")%>"/></div>
+                    </td>
+                    <td class="text-left">
+                        <div><b><%= mech.name %></b></div>
+                    </td>
+                    <td class="text-left">
+                        <%= if mech.team == "boylur" do %>
+                            Boylur Plait
+                        <% else %>
+                            Planet Earth
+                        <% end %>
+                    </td>                
+                    </tr>
+                <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<% else %>
+    
+    <div class="row">
+    <div class="col-9">
+        <div class="card card-accent-primary">
+            <div class="card-header">
+                <strong>Game Board</strong>&nbsp;&nbsp;<small>TURN <%= @running_match.turn %></small>
+
+            </div>
+            <div class="card-body">                
+
+                <div class="game-board"
+                    style="grid-template-columns: <%= for _x <- 0..@board.width-1 do %> 32px <% end %>; grid-template-rows: <%= for _y <- 0..@board.height-1 do %> 32px <% end %>">
+
+                    <%= for piece <- @board |> Core.Board.render_pieces() do %>
+                    <%= if piece != :empty do %>
+                        <div style="grid-column: <%= piece.column%>; grid-row: <%= piece.row%>" class="middle">
+                            <img alt="<%= piece.name %> (<%=elem(piece.original_position,0)%>,<%=elem(piece.original_position,1)%>)"
+                                 title="<%= piece.name %> (<%=elem(piece.original_position,0)%>,<%=elem(piece.original_position,1)%>)"
+                                 src="<%= Routes.static_path(@socket, "/images/avatars/#{piece.avatar}.png") %>""/>
+                        </div>      
+                    <% end %>
+                    <% end %>
+
+                </div>
+                
+            </div>    
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="card card-accent-secondary">
+            <div class="card-header">
+                <strong>Players</strong>
+            </div>
+            <div class="card-body">
+                <table class="table table-responsive-sm table-outline mb-0">
+                <tbody>
+                     <%= for player <- @board.mechs |> Map.values do %>
+                    <tr>
+                        <td class="text-center">
+                            <div class="c-avatar middle">
+                                <img alt="avatar"
+                                 src="<%= Routes.static_path(@socket, "/images/avatars/#{player.avatar}.png") %>""/>
+                            </div>
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 3px;"><%= player.name %></div>                            
+                            <div><%= player.health %></div>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<% end %>

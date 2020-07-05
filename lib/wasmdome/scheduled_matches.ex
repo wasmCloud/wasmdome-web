@@ -7,15 +7,20 @@ defmodule Wasmdome.ScheduledMatches do
     alias Timex.Duration
 
     def list_schedule do
-        sched = scheduled_matches()
-        if !sched do
-            []
+        sched = scheduled_matches()        
+        if [ h | t ] = sched do
+            [ put_in(h.current_mechs, length(mechs_in_lobby())) | t ]
         else
-            if [ h | t ] = sched do
-                [ put_in(h.current_mechs, length(mechs_in_lobby())) | t ]
-            else
-                []
-            end        
+            []
+        end        
+    end    
+
+    def next_match(schedule) do
+        if schedule do
+            schedule
+            |> Enum.find( fn m -> m.starts_in_mins >= 0 end)
+        else
+            nil
         end
     end
 
@@ -37,7 +42,7 @@ defmodule Wasmdome.ScheduledMatches do
     def scheduled_matches do
         case Gnat.request(Gnat, "wasmdome.public.arena.schedule", "", receive_timeout: 1500) do
             {:ok, %{body: rawbody}} -> Jason.decode!(rawbody) |> extract_schedule
-            {:error, _} -> nil
+            {:error, _} -> []
         end
     end
 
@@ -51,7 +56,7 @@ defmodule Wasmdome.ScheduledMatches do
     end
 
     defp convert(%{
-        "aps_per_turn" => _aps_per_turn,
+        "aps_per_turn" => aps_per_turn,
         "entry" => %{
           "board_height" => height,
           "board_width" => width,
@@ -67,6 +72,7 @@ defmodule Wasmdome.ScheduledMatches do
         friendly = diff |> Timex.Format.Duration.Formatters.Humanized.format
         mins = Duration.to_minutes(diff, truncate: true)
         %Match{
+            aps_per_turn: aps_per_turn,
             board_height: height,
             board_width: width,
             max_mechs: max_actors,
@@ -76,7 +82,7 @@ defmodule Wasmdome.ScheduledMatches do
             current_mechs: 0,
             id: match_id
         }
-    end
+    end    
 
     defp pretty(mins, friendly) do
         if mins < 0 do

@@ -34,12 +34,11 @@ defmodule Core.Board do
                                          "position" => %{"x" => x, "y" => y},
                                          "team" => team,
                                          "avatar" => avatar,
-                                         "name" => name,
-                                         "health" => health}
+                                         "name" => name}                                         
                                     }
                                 }
                             }, _as_of) do        
-        new_mech = Core.Mech.new(pk, position: {x,y}, team: team, avatar: avatar, name: name, health: health)
+        new_mech = Core.Mech.new(pk, position: {x,y}, team: team, avatar: avatar, name: name)
         put_in(board.mechs[pk], new_mech)            
     end
 
