@@ -1,5 +1,5 @@
 <%= if @next_match do %>
-    <%= if @next_match.starts_in_mins >= 0 && @next_match.starts_in_mins < 3 do %>
+    <%= if @next_match.starts_in_mins >= 0 && @next_match.starts_in_mins <= 1.2 do %>
         <div class="card text-white bg-gradient-danger">
     <% else %>
         <div class="card text-white bg-gradient-info">
@@ -117,4 +117,34 @@
             </div>
         </div>
     </div>
+<% end %>
+
+
+<%= if @results do %>
+<div class="modal" id="successModal" tabindex="-1" role="dialog" style="display:block;">
+    <div class="modal-dialog modal-success" role="document">
+        <div class="modal-content">
+            <div class="modal-header">                                
+                <h4 class="modal-title">Match Completed</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <%= case @results do %>
+                <% {:survivors, survivors } -> %>
+                Survivors: 
+                <ul>
+                    <%= for survivor <- survivors do %>
+                        <li><%=survivor.name%></li>
+                    <% end %>
+                </ul>
+                <% {:victory, victor } -> %>
+                Victory: <b><%= victor %></b>
+                <% end %>                
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal" phx-click="close_results">Close</button>                
+            </div>
+        </div>
+    </div>
+</div>
 <% end %>

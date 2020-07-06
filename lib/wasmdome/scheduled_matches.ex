@@ -8,11 +8,12 @@ defmodule Wasmdome.ScheduledMatches do
 
     def list_schedule do
         sched = scheduled_matches()        
+        # This is absolutely hideous code.        
         if [ h | t ] = sched do
             [ put_in(h.current_mechs, length(mechs_in_lobby())) | t ]
         else
             []
-        end        
+        end                
     end    
 
     def next_match(schedule) do
@@ -50,7 +51,7 @@ defmodule Wasmdome.ScheduledMatches do
         m
     end
 
-    defp extract_schedule(matches) do
+    defp extract_schedule(matches) do        
         matches 
         |> Enum.map(fn m -> convert(m) end)
     end
