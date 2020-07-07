@@ -6,7 +6,7 @@ defmodule Wasmdome.GnatSubscriber do
     GenServer.start_link(__MODULE__, opts)
   end
 
-  def init(_topic) do    
+  def init(_args) do    
     Process.send_after(self(), :tick, 15_000)
     Gnat.sub(Gnat, self(), "wasmdome.match.*.events")    
     Gnat.sub(Gnat, self(), "wasmdome.public.arena.events")

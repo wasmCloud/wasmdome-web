@@ -13,7 +13,7 @@ defmodule Wasmdome.Application do
         id: Gnat,
         start: {Gnat, :start_link, [%{host: '127.0.0.1', port: 4222}, [name: Gnat]]}
       },
-      {Wasmdome.GnatSubscriber, [topic: "wasmdome.match_events.*"]},
+      {Wasmdome.GnatSubscriber, []},
       WasmdomeWeb.Endpoint,
       {Wasmdome.Repo, []}      
     ]

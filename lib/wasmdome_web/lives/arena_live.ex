@@ -32,7 +32,7 @@ defmodule WasmdomeWeb.ArenaLive do
             nil
         end
         
-        {:noreply, assign(socket, mechs: m, next_match: nm, running_match: rm, board: b, )}
+        {:noreply, assign(socket, mechs: m, next_match: nm, running_match: rm, board: b )}
     end
 
     def handle_info(%{event: "gnat_msg", payload:

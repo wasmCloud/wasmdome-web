@@ -61,9 +61,6 @@ defmodule WasmdomeWeb.Router do
     get "/profile",                 ProfileController, :index
     get "/profile/edit",            ProfileController, :edit
     put "/profile",                 ProfileController, :update    
-    get "/mechs",                   MechsController, :index
- #   get "/mechs/upload",            MechsController, :new
- #   post "/mechs/upload",           MechsController, :create    
 
   end
 

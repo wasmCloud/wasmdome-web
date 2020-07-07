@@ -5,7 +5,5 @@ defmodule Wasmdome.Wascc do
     
     def validate_jwt(_jwt), do: :erlang.nif_error(:nif_not_loaded)
 
-    def extract_jwt(_bytes), do: :erlang.nif_error(:nif_not_loaded)
-
-    def upload_module_to_gantry(_actor, _bytes), do: :erlang.nif_error(:nif_not_loaded)
+    def extract_jwt(_bytes), do: :erlang.nif_error(:nif_not_loaded)   
 end
