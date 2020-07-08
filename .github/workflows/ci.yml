@@ -54,3 +54,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: wascc/wasmdome-web
           tags: latest
+          tag_with_ref: true
+          tag_with_sha: true
+          push: ${{ startsWith(github.ref, 'refs/tags/') }}
