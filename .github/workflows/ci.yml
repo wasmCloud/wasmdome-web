@@ -46,3 +46,11 @@ jobs:
           DB_USER: postgres
           DB_PASS: postgres
           DB_HOST: 0.0.0.0  
+      
+      - name: Push to Dockerhub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: wascc/wasmdome-web
+          tags: latest
