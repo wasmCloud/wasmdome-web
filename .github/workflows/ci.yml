@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-elixir@v1.0.0
         with:
           otp-version: 22.1.3
-          elixir-version: 1.9.2
+          elixir-version: 1.10.3
 
       - name: Install Rust stable toolchain
         uses: actions-rs/toolchain@v1

@@ -48,7 +48,7 @@ RUN mix do compile, release
 # prepare release image
 FROM debian AS app
 RUN apt-get update
-RUN apt-get install libssl-dev libncurses-dev libgcc-8-dev locales locales-all -y
+RUN apt-get install openssl libncurses6 libgcc-8-dev locales locales-all -y
 ENV LC_ALL en_US.UTF-8
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
