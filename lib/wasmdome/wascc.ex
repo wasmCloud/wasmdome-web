@@ -5,5 +5,7 @@ defmodule Wasmdome.Wascc do
     
     def validate_jwt(_jwt), do: :erlang.nif_error(:nif_not_loaded)
 
-    def extract_jwt(_bytes), do: :erlang.nif_error(:nif_not_loaded)   
+    def extract_jwt(_bytes), do: :erlang.nif_error(:nif_not_loaded)
+
+    def lattice_inventory(), do: :erlang.nif_error(:nif_not_loaded)
 end

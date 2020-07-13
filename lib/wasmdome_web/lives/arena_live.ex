@@ -16,10 +16,16 @@ defmodule WasmdomeWeb.ArenaLive do
             :ok = Phoenix.PubSub.subscribe(Wasmdome.PubSub, "gnat:wasmdome.match.events")
         end        
         Process.send_after(self(), :tick, 5_000)
+        {l_hosts, l_actors} = case Wasmdome.Wascc.lattice_inventory() do
+            {:ok, inv} -> {inv.hosts, inv.actors}
+            {:error, _e} -> {0, 0}
+        end
         {:ok, assign(socket, mechs: Arena.get_arena_lobby(), 
                         # Odd, but it's possible for us to get the spawn message before we get MatchStarted, so we need a placeholder board
                              board: Board.new(24,24), 
                      running_match: nil,
+                           l_hosts: l_hosts,
+                          l_actors: l_actors,
                            results: nil,
                         next_match: ScheduledMatches.list_schedule() |> ScheduledMatches.next_match()) }
     end

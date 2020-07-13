@@ -23,10 +23,21 @@
 <% end %>
 
 <%= if !@running_match do %>
+
+
     <div class="card">
-        <div class="card-header"> <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>&nbsp;&nbsp;<b>Arena Lobby</b></div>
+        <%= if @l_hosts < 1 || @l_actors < 1 do %>
+            <div class="card-header bg-gradient-danger">
+        <% else %>
+            <div class="card-header"> 
+        <% end %>
+            <img src="/coreui/sprites/gamepad.svg" height="32" width="32"/>&nbsp;&nbsp;<b>Arena Lobby</b> <small>(<%= @l_hosts %> hosts, <%= @l_actors %> actors in lattice)</small>
+        </div>
         <div class="card-body">
-            <table class="table table-responsive-sm table-outline table-striped">
+
+            
+        
+            <table class="table table-responsive-sm table-outline table-striped" class="col-9">
                 <thead class="thead-light">
                     <tr>                     
                     <th width="40" class="text-center">
@@ -60,6 +71,7 @@
             </table>
         </div>
     </div>
+    
 <% else %>
     
     <div class="row">

@@ -23,7 +23,7 @@
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/arena/live">Arena</a></li>
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/arena/schedule">Match Schedule</a></li>
                 <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/leaderboard">Leaderboard</a></li>
-                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/documentation">Documentation</a></li>
+                <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="https://wascc.dev">Documentation</a></li>
             </ul>
             <ul class="c-header-nav mfs-auto">
                 <li class="c-header-nav-item px-3 c-d-legacy-none">
@@ -49,11 +49,7 @@
                                 alt="<%= @current_user.name %>"></div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right pt-0">
-                      <div class="dropdown-header bg-light py-2"><strong><%= @current_user.name %></strong></div><a
-                          class="dropdown-item" href="/my/mechs">
-                        <svg class="c-icon mfe-2">
-                          <use xlink:href="<%= Routes.static_path(@conn, "/coreui/sprites/free.svg#cil-3d") %>"></use>
-                        </svg> My Mechs</a>
+                      <div class="dropdown-header bg-light py-2"><strong><%= @current_user.name %></strong></div>
                       <a
                           class="dropdown-item" href="<%= Routes.static_path(@conn, "/my/profile")%>">
                         <svg class="c-icon mfe-2">

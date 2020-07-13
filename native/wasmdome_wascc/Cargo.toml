@@ -12,3 +12,4 @@ crate-type = ["dylib"]
 [dependencies]
 rustler = "0.22.0-rc.0"
 wascap = "0.4.7"
+latticeclient = "0.0.1"
