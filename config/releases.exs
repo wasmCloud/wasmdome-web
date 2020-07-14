@@ -16,13 +16,18 @@ config :wasmdome, WasmdomeWeb.Endpoint,
   secret_key_base: secret_key_base
 
 config :wasmdome, Wasmdome.Repo,
-  database: System.get_env("DB_NAME"),
-  username: System.get_env("DB_USER"),
-  password: System.get_env("DB_PASS"),
-  hostname: System.get_env("DB_HOST")
+  database: System.fetch_env!("DB_NAME"),
+  username: System.fetch_env!("DB_USER"),
+  password: System.fetch_env!("DB_PASS"),
+  hostname: System.fetch_env!("DB_HOST")
 
 config :wasmdome,
   ecto_repos: [Wasmdome.Repo]
+
+config :ueberauth, Ueberauth.Strategy.Auth0.OAuth,
+  domain: System.fetch_env!("AUTH0_DOMAIN"),
+  client_id: System.fetch_env!("AUTH0_CLIENT_ID"),
+  client_secret: System.fetch_env!("AUTH0_CLIENT_SECRET")
 
 # ## Using releases (Elixir v1.9+)
 #
