@@ -7,22 +7,23 @@ defmodule Wasmdome.ScheduledMatches do
     alias Timex.Duration
 
     def list_schedule do
-        sched = scheduled_matches()        
-        # This is absolutely hideous code.        
-        if [ h | t ] = sched do
-            [ put_in(h.current_mechs, length(mechs_in_lobby())) | t ]
-        else
-            []
-        end                
+        sched = scheduled_matches()   
+        case sched do
+            [ h | t] -> [ put_in(h.current_mechs, length(mechs_in_lobby())) | t ]
+            [] -> []
+            nil -> []
+        end
     end    
 
-    def next_match(schedule) do
-        if schedule do
-            schedule
-            |> Enum.find( fn m -> m.starts_in_mins >= 0 end)
-        else
-            nil
-        end
+    def next_match([]) do 
+        nil
+    end
+    def next_match(nil) do
+        nil
+    end
+    def next_match(schedule) do        
+        schedule
+        |> Enum.find( fn m -> m.starts_in_mins >= 0 end)        
     end
 
     def generate_token(account) do

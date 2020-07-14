@@ -28,12 +28,14 @@ defmodule Wasmdome.GnatSubscriber do
 
   def handle_info(:tick, state) do    
     nm = Wasmdome.ScheduledMatches.list_schedule() |> Wasmdome.ScheduledMatches.next_match()
-    if nm && nm.starts_in_mins < 0.5 && nm.starts_in_mins >= 0 do
-      Process.send_after(self(), :tick, 180_000)
-      start_match(nm)
-    else
-      Process.send_after(self(), :tick, 15_000)
-    end
+    if nm != nil do    
+      if nm.starts_in_mins < 0.5 and nm.starts_in_mins >= 0 do
+        Process.send_after(self(), :tick, 180_000)
+        start_match(nm)
+      else
+        Process.send_after(self(), :tick, 15_000)
+      end
+    end 
     {:noreply, state}
   end
 
