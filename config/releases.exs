@@ -15,6 +15,15 @@ config :wasmdome, WasmdomeWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+config :wasmdome, Wasmdome.Repo,
+  database: System.get_env("DB_NAME"),
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASS"),
+  hostname: System.get_env("DB_HOST")
+
+config :wasmdome,
+  ecto_repos: [Wasmdome.Repo]
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix
