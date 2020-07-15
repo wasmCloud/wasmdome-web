@@ -9,9 +9,10 @@ secret_key_base =
     """
 
 config :wasmdome, WasmdomeWeb.Endpoint,
-  http: [
+  http: [    
     port: String.to_integer(System.get_env("PORT") || "4000"),
-    transport_options: [socket_opts: [:inet6]]
+    ip: {0,0,0,0}
+    #transport_options: [socket_opts: [:inet6]]
   ],
   secret_key_base: secret_key_base
 
