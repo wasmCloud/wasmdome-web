@@ -1,6 +1,9 @@
 <div class="card">
     <div class="card-header"><b>Leaderboard</b></div>
     <div class="card-body">
+    <%= if length(@entries) == 0 do %>
+        No leaderboard entries or the leaderboard service is offline
+    <% else %>
         <table class="table table-responsive-sm table-outline table-striped">
             <thead class="thead-light">
                 <tr>                
@@ -14,12 +17,11 @@
                 <th class="text-center">Deaths</th>
                 <th class="text-center">Wins</th>                
                 <th class="text-center">Draws</th>
-                <th class="text-center">Score</th>                
-                <th class="text-right">Last Activity</th>
+                <th class="text-center">Score</th>                                
                 </tr>
             </thead>
             <tbody>
-            <%= for entry <- Enum.sort(@entries) do %>
+            <%= for entry <- @entries do %>
                 <tr>                
                 <td class="text-center">
                     <div class="c-avatar"><img class="c-avatar-img" src="<%= Routes.static_path(@conn, "/images/avatars/#{entry.avatar}.png")%>"></div>
@@ -41,13 +43,11 @@
                 </td>                
                 <td class="text-center">
                     <%= entry.points %>
-                </td>
-                <td class="text-right">
-                    <i><%= entry.last_activity %></i>
-                </td>
+                </td>                
                 </tr>
             <% end %>
             </tbody>
         </table>
+    <% end %>
     </div>
 </div>
