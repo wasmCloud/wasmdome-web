@@ -40,7 +40,7 @@ fn lattice_inventory() -> Result<LatticeInventory, String> {
     };
     Ok(LatticeInventory {
         hosts: hosts.len() as u32,
-        actors: actors.len() as u32,
+        actors: actors.values().fold(0_u32, |acc, a| acc + a.len() as u32),
     })
 }
 
