@@ -17,14 +17,7 @@
             <%= for match <- @matches do %>
                 <tr>                
                 <td width="150">
-                <%= if match.starts_in_mins <= 20 && match.starts_in_mins > 0 && match.current_mechs < match.max_mechs do %>
-                    <%= form_for @conn, "compete", fn f -> %>
-                    <%= button "Compete!", to: "/arena/compete", method: "post", 
-                         class: "btn btn-pill btn-block btn-success active"%>
-                    <% end %> 
-                <% else %>
-                    <br/>
-                <% end %>                    
+                    <br/>                
                 </td>
                 <td class="text-center">
                     <div><%= match.board_width%> x <%= match.board_height%></div>

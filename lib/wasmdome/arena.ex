@@ -6,7 +6,7 @@ defmodule Wasmdome.Arena do
     alias Wasmdome.Arena.MechInfo
     
     def get_arena_lobby() do
-        case Gnat.request(Gnat, "wasmdome.internal.arena.control", "\"QueryMechs\"", receive_timeout: 500) do
+        case Gnat.request(Gnat, "wasmdome.internal.arena.control", "\"QueryMechs\"", receive_timeout: 2500) do
             {:ok, %{body: rawbody}} -> rawbody |> decode
             {:error, _} -> []
         end

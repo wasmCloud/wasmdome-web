@@ -29,7 +29,7 @@ defmodule Wasmdome.GnatSubscriber do
   def handle_info(:tick, state) do    
     nm = Wasmdome.ScheduledMatches.list_schedule() |> Wasmdome.ScheduledMatches.next_match()
     if nm != nil do    
-      if nm.starts_in_mins < 0.5 and nm.starts_in_mins >= 0 do
+      if nm.starts_in_mins <= 1 and nm.starts_in_mins >= 0 do
         Process.send_after(self(), :tick, 180_000)
         start_match(nm)
       else
@@ -45,7 +45,7 @@ defmodule Wasmdome.GnatSubscriber do
     |> Enum.join(",")
 
     smcommand = "{\"StartMatch\":{\"match_id\": \"#{nm.id}\", \"board_height\": #{nm.board_height}, \"board_width\": #{nm.board_width}, \"max_turns\": #{nm.max_turns}, \"aps_per_turn\": #{nm.aps_per_turn}, \"actors\": [#{actors}]} }"
-    case Gnat.request(Gnat, "wasmdome.internal.arena.control", smcommand, receive_timeout: 1500) do
+    case Gnat.request(Gnat, "wasmdome.internal.arena.control", smcommand, receive_timeout: 2500) do
       {:ok, _} -> Logger.debug "Published match start event for #{nm.id}"
       {:error, e} -> Logger.error "Failed to publish match start event: #{e}"
     end

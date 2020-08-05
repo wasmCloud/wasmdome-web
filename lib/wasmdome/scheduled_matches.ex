@@ -28,21 +28,21 @@ defmodule Wasmdome.ScheduledMatches do
 
     def generate_token(account) do
         tok_req = "{\"account_key\": \"#{account}\"}"
-        case Gnat.request(Gnat, "wasmdome.internal.ott.gen", tok_req, receive_timeout: 500) do
+        case Gnat.request(Gnat, "wasmdome.internal.ott.gen", tok_req, receive_timeout: 2500) do
             {:ok, %{body: rawbody}} -> rawbody
             {:error, _} -> nil
         end
     end
 
     def mechs_in_lobby do
-        case Gnat.request(Gnat, "wasmdome.internal.arena.control", "\"QueryMechs\"", receive_timeout: 500) do
+        case Gnat.request(Gnat, "wasmdome.internal.arena.control", "\"QueryMechs\"", receive_timeout: 3500) do
             {:ok, %{body: rawbody}} -> Jason.decode!(rawbody) |> extract_mechs
             {:error, _} -> []
         end
     end
 
     def scheduled_matches do
-        case Gnat.request(Gnat, "wasmdome.public.arena.schedule", "", receive_timeout: 1500) do
+        case Gnat.request(Gnat, "wasmdome.public.arena.schedule", "", receive_timeout: 2500) do
             {:ok, %{body: rawbody}} -> Jason.decode!(rawbody) |> extract_schedule
             {:error, _} -> []
         end
