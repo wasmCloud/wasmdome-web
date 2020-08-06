@@ -21,8 +21,14 @@ defmodule Core.Mech do
         }        
     end
 
-    def take_damage(mech, dmg) do        
-        put_in(mech.health, mech.health - dmg)
+    def take_damage(mech, dmg) do   
+        new_health = mech.health - dmg
+        new_health = if new_health < 0 do
+            0
+        else
+            new_health
+        end     
+        put_in(mech.health, new_health)
     end
 
     def destroy(mech) do

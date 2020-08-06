@@ -10,7 +10,7 @@ defmodule Wasmdome.Leaderboards do
     end
 
     defp leaderboard_contents() do
-        case Gnat.request(Gnat, "wasmdome.internal.arena.leaderboard.get", "", receive_timeout: 500) do
+        case Gnat.request(Gnat, "wasmdome.internal.arena.leaderboard.get", "", receive_timeout: 1500) do
             {:ok, %{body: rawbody}} -> Jason.decode!(rawbody) |> extract_leaderboard
             {:error, _} -> []
         end
